@@ -16,10 +16,10 @@
   * [1.11 用户关系表：tb_obj_operation](#tb_obj_operation)
 * [第2章 接口设计](#接口设计)
   *  [2.1 课程相关](#课程相关)
-	  * [2.1.1 获取课程专业列表](#获取试卷详情)
+	  * [2.1.1 获取课程专业列表](#获取课程专业列表)
 	  * [2.1.2 获取课程列表](#获取课程列表)
 	  * [2.1.3 获取课程列表，分页，评论量，点赞量，模糊查询](#获取课程列表1)
-	  *  [2.1.4 获取课程详情，及章节列表](#tb_exam)
+	  *  [2.1.4 获取课程详情，及章节列表](#获取课程详情)
  *  [2.2 题库相关](#题库相关)
 	  *  [2.2.1 获取试卷专业列表](#获取试卷专业列表)
 	  * [2.2.2 获取试卷科目列表](#获取试卷科目列表)
@@ -30,13 +30,13 @@
 	  *  [2.3.1 获取笔记专业列表](#获取笔记专业列表)
 	  * [2.3.2 获取笔记科目列表](#获取笔记科目列表) 
 	  * [2.3.3 获取笔记列表](#获取笔记列表)
-	  * [2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询](#获取笔记列表)
+	  * [2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询](#获取笔记列表1)
 	  * [2.3.5 获取笔记详情](#获取笔记详情)
   *  [2.4 资源相关](#资源相关)
 	  *  [2.4.1 获取资源专业列表](#获取资源专业列表)
 	  * [2.4.2 获取资源科目列表](#获取资源科目列表)
 	  * [2.4.3 获取资源列表](#获取资源列表)
-	  * [2.4.4 获取资源列表，含收藏量，评论量，分页](#获取资源列表)
+	  * [2.4.4 获取资源列表，含收藏量，评论量，分页](#获取资源列表1)
 	  * [2.4.5 获取资源详情](#获取资源详情)
   *  [2.5 新闻相关](#新闻相关)
 	  * [2.5.1 获取新闻标签列表](#获取新闻标签列表)
@@ -45,13 +45,13 @@
   *  [2.6 社区相关](#社区相关)
 	  * [2.6.1 获取社区列表](#获取社区列表)
 	  *  [2.6.2 获取社区详情，及帖子列表](#获取社区详情)
-	  * [2.6.3 获取帖子列表](#获取试卷列表)
-	  * [2.6.4 获取帖子详情，及评论列表](#获取试卷列表1)
+	  * [2.6.3 获取帖子列表](#获取帖子列表)
+	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
  *  [2.7 用户相关](#用户相关)
 	  * [2.6.1 获取社区列表](#获取社区列表)
 	  *  [2.6.2 获取社区详情，及帖子列表](#获取社区详情)
-	  * [2.6.3 获取帖子列表](#获取试卷列表)
-	  * [2.6.4 获取帖子详情，及评论列表](#获取试卷列表1)
+	  * [2.6.3 获取帖子列表](#获取帖子列表)
+	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
 	
 
 <a name="项目介绍"></a>
@@ -229,7 +229,7 @@
 ## 接口设计
 <a name="课程相关"></a>
 ### 2.1 课程相关
-
+  <a name="获取课程专业列表"></a>
 #### 2.1.1 获取课程专业列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -289,6 +289,7 @@ type=course_major
   ]
 }
 ```
+  <a name="获取课程列表"></a>
 #### 2.1.2 获取课程列表
 ##### 接口地址：/studentManage/api/course/getAll
 ##### 方法：get
@@ -328,7 +329,7 @@ type=course_major
   "count": 2
 }
 ```
-
+  <a name="获取课程列表1"></a>
 #### 2.1.3 获取课程列表，分页，评论量，点赞量，模糊查询
 ##### 接口地址：/studentManage/api/course/getAll
 ##### 方法：get
@@ -374,6 +375,7 @@ type=course_major
   ]
 }
 ```
+  <a name="获取课程详情"></a>
 #### 2.1.4 获取课程详情，及章节列表
 ##### 接口地址：/studentManage/api/course/getOne
 ##### 方法：get
@@ -472,7 +474,7 @@ courseid：课程id
 ```
 <a name="题库相关"></a>
 ### 2.2 题库相关
-
+  <a name="获取试卷专业列表"></a>
 #### 2.2.1 获取试卷专业列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -532,6 +534,7 @@ type=exam_major
   ]
 }
 ```
+  <a name="获取试卷科目列表"></a>
 #### 2.2.2 获取试卷科目列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -569,6 +572,7 @@ type=exam_subject
   ]
 }
 ```
+  <a name="获取试卷列表"></a>
 #### 2.2.3 获取试卷列表
 ##### 接口地址：/studentManage/api/exam/findAll
 ##### 方法：get
@@ -622,8 +626,61 @@ keyword
   ]
 }
 ```
+  <a name="获取试卷列表1"></a>
 #### 2.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询
+##### 接口地址：/studentManage/api/exam/findAll
+##### 方法：get
+##### 参数：
+major_id
+keyword
+##### 请求实例：http://localhost:4000/studentManage/api/exam/findAll
 
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "count": 2,
+  "list": [
+    {
+      "id": 11,
+      "exam_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
+      "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "subject_id": "69265b10-bcfc-11e5-8cfe-770f2937a8b8",
+      "subject_name": "药理学",
+      "icon": null,
+      "name": "[药物代谢动力学]",
+      "brief": "药理学特色课程",
+      "level": null,
+      "datems": "1453014632009",
+      "createdAt": "2016-01-17T11:53:07.000Z",
+      "updatedAt": "2016-01-17T11:53:07.000Z",
+      "s_count": null,  //收藏量
+      "d_count": null,  //点赞量
+      "p_count": null   //评论量
+    },
+    {
+      "id": 12,
+      "exam_id": "6dea1280-bd9d-11e5-b900-59869364e3c1",
+      "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "subject_id": "69265b10-bcfc-11e5-8cfe-770f2937a8b8",
+      "subject_name": "药理学",
+      "icon": null,
+      "name": "医学基础知识试题",
+      "brief": "百度文库",
+      "level": null,
+      "datems": "1453091743664",
+      "createdAt": "2016-01-18T04:39:15.000Z",
+      "updatedAt": "2016-01-18T04:39:15.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    }
+  ]
+}
+```
+  <a name="获取试卷详情"></a>
 #### 2.2.5 获取试卷详情，及试题列表
 ##### 接口地址：/studentManage/api/exam/getOne
 ##### 方法：get
@@ -688,7 +745,7 @@ keyword
 ```
 <a name="笔记相关"></a>
 ### 2.3 笔记相关
-  
+  <a name="获取笔记专业列表"></a>
 #### 2.3.1 获取笔记专业列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -726,6 +783,7 @@ type=note_major
   ]
 }
 ```
+<a name="获取笔记科目列表"></a>
 #### 2.3.2 获取笔记科目列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -763,7 +821,7 @@ type=note_subject
   ]
 }
 ```
-
+<a name="获取笔记列表"></a>
 #### 2.3.3 获取笔记列表
 ##### 接口地址：/studentManage/api/note/getAll
 ##### 方法：get
@@ -821,6 +879,7 @@ keyword
   ]
 }
 ```
+<a name="获取笔记列表1"></a>
 #### 2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询
 ##### 接口地址：/studentManage/api/note/list
 ##### 方法：get
@@ -889,6 +948,7 @@ major_id
   "count": 3
 }
 ```
+<a name="获取笔记详情"></a>
 #### 2.3.5 获取笔记详情
 ##### 接口地址：/studentManage/api/note/getOne
 ##### 方法：get
@@ -921,7 +981,7 @@ note_id
 ```
 <a name="资源相关"></a>
 ### 2.4 资源相关
-
+<a name="获取资源专业列表"></a>
 #### 2.4.1 获取资源专业列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -987,6 +1047,7 @@ type=resource_subject
   ]
 }
 ```
+<a name="获取资源科目列表"></a>
 #### 2.4.2 获取资源科目列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -1024,6 +1085,7 @@ type=resource_subject
   ]
 }
 ```
+<a name="获取资源列表"></a>
 #### 2.4.3 获取资源列表
 ##### 接口地址：/studentManage/api/resource/getAll
 ##### 方法：get
@@ -1099,6 +1161,7 @@ note_id
   ]
 }
 ```
+<a name="获取资源列表1"></a>
 #### 2.4.4 获取资源列表，含收藏量，评论量，分页
 ##### 接口地址：/studentManage/api/resource/list
 ##### 方法：get
@@ -1191,6 +1254,7 @@ limit
 }
 
 ```
+<a name="获取资源详情"></a>
 #### 2.4.5 获取资源详情
 ##### 接口地址：/studentManage/api/resource/getOne
 ##### 方法：get
@@ -1225,6 +1289,7 @@ resource_id
 ```
 <a name="新闻相关"></a>
 ### 2.5 新闻相关
+<a name="获取新闻标签列表"></a>
 #### 2.5.1 获取新闻标签列表
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
@@ -1317,6 +1382,7 @@ type=subscription
   ]
 }
 ```
+<a name="获取新闻列表"></a>
 #### 2.5.2 获取新闻列表
 ##### 接口地址：/studentManage/api/news/list
 ##### 方法：get
@@ -1371,6 +1437,7 @@ type_id
   ]
 }
 ```
+<a name="获取新闻详情"></a>
 #### 2.5.3 获取新闻详情
 ##### 接口地址：/studentManage/api/news/getOne
 ##### 方法：get
@@ -1407,6 +1474,7 @@ news_id
 ```
 <a name="社区相关"></a>
 ### 2.6 社区相关
+<a name="获取社区列表"></a>
 #### 2.6.1 获取社区列表
 ##### 接口地址：/studentManage/api/community/list
 ##### 方法：get
@@ -1443,6 +1511,7 @@ keyword
   ]
 }
 ```
+<a name="获取社区详情"></a>
 #### 2.6.2 获取社区详情，及帖子列表
 ##### 接口地址：/studentManage/api/community/getOne
 ##### 方法：get
@@ -1503,6 +1572,7 @@ community_id
   ]
 }
 ```
+<a name="获取帖子列表"></a>
 #### 2.6.3 获取帖子列表
 ##### 接口地址：/studentManage/api/post/list
 ##### 方法：get
@@ -1552,6 +1622,7 @@ community_id
 }
 
 ```
+<a name="获取帖子详情"></a>
 #### 2.6.4 获取帖子详情，及评论列表
 ##### 接口地址：/studentManage/api/post/list
 ##### 方法：get
@@ -1601,7 +1672,6 @@ community_id
 ```
 <a name="用户相关"></a>
 ### 2.7 用户相关
-
 
 
 
