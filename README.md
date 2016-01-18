@@ -293,7 +293,8 @@ type=course_major
 #### 2.1.2 获取课程列表
 ##### 接口地址：/studentManage/api/course/getAll
 ##### 方法：get
-##### 参数：无
+##### 参数：
+keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/course/getAll
 
 ```
@@ -331,10 +332,14 @@ type=course_major
 ```
   <a name="获取课程列表1"></a>
 #### 2.1.3 获取课程列表，分页，评论量，点赞量，模糊查询
-##### 接口地址：/studentManage/api/course/getAll
+##### 接口地址：/studentManage/api/course/list
 ##### 方法：get
-##### 参数：无
-##### 请求实例：http://localhost:4000/studentManage/api/course/getAll
+##### 参数：
+major_id：专业id
+keyword：关键字
+page：页码（默认为1）
+limit：每页条数（默认为10）
+##### 请求实例：http://localhost:4000/studentManage/api/course/list?major_id=2d92b270-bcfb-11e5-8cfe-770f2937a8b8
 
 ```
 {
@@ -577,8 +582,7 @@ type=exam_subject
 ##### 接口地址：/studentManage/api/exam/findAll
 ##### 方法：get
 ##### 参数：
-major_id
-keyword
+keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/exam/findAll
 
 ```
@@ -628,12 +632,14 @@ keyword
 ```
   <a name="获取试卷列表1"></a>
 #### 2.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询
-##### 接口地址：/studentManage/api/exam/findAll
+##### 接口地址：/studentManage/api/exam/list
 ##### 方法：get
 ##### 参数：
-major_id
-keyword
-##### 请求实例：http://localhost:4000/studentManage/api/exam/findAll
+subject_id：科目id
+keyword：关键字
+page：页码（默认为1）
+limit：每页条数（默认为10）
+##### 请求实例：http://localhost:4000/studentManage/api/exam/list?subject_id=69265b10-bcfc-11e5-8cfe-770f2937a8b8
 
 ```
 {
@@ -685,8 +691,7 @@ keyword
 ##### 接口地址：/studentManage/api/exam/getOne
 ##### 方法：get
 ##### 参数：
-exam_id
-keyword
+exam_id：试卷id
 ##### 请求实例：http://localhost:4000/studentManage/api/exam/getOne?exam_id=df8a5720-bd10-11e5-8cfe-770f2937a8b8
 
 ```
@@ -825,8 +830,7 @@ type=note_subject
 #### 2.3.3 获取笔记列表
 ##### 接口地址：/studentManage/api/note/getAll
 ##### 方法：get
-##### 参数：
-keyword
+##### 参数：keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/note/getAll
 
 ```
@@ -884,14 +888,17 @@ keyword
 ##### 接口地址：/studentManage/api/note/list
 ##### 方法：get
 ##### 参数：
-keyword
-major_id
-##### 请求实例：http://localhost:4000/studentManage/api/note/list
+keyword：关键字
+subject_id：科目id
+page：页码（默认为1）
+limit：每页条数（默认为10）
+##### 请求实例：http://localhost:4000/studentManage/api/note/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
 ```
 {
   "code": "200",
   "msg": "获取列表成功！",
+  "count": 2,
   "list": [
     {
       "id": 1,
@@ -926,26 +933,8 @@ major_id
       "s_count": null,
       "d_count": null,
       "p_count": null
-    },
-    {
-      "id": 4,
-      "level": 1,
-      "note_id": "d46a28e0-bd18-11e5-ace2-11edb9ad68d4",
-      "major_id": "a75077f0-bcfb-11e5-8cfe-770f2937a8b8",
-      "major_name": "基础医学",
-      "subject_id": "2858a130-bd18-11e5-ace2-11edb9ad68d4",
-      "subject_name": "[生理学]",
-      "title": "中医基础理论 ",
-      "content": "<p>\r\n<div>第一单元 中医学理论体系的主要特点<br>\r\n<br>\r\n细目一：整体观念<br>\r\n<br>\r\n1、整体观念的概念：整体观念是中医学关于人体自身的完整性及人与自然、社会环境的统<br>\r\n<br>\r\n一性的认识。<br>\r\n<br>\r\n2、整体观念的内容：1.人体是一个有机整体。<br>\r\n<br>\r\n2.人与自然环境的统一性。<br>\r\n<br>\r\n3.人与社会环境的统一性。<br>\t<a target=\"_blank\" rel=\"nofollow\" href=\"http://ww",
-      "datems": "1453032994594",
-      "createdAt": "2016-01-17T12:50:04.000Z",
-      "updatedAt": "2016-01-17T14:39:07.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
     }
-  ],
-  "count": 3
+  ]
 }
 ```
 <a name="获取笔记详情"></a>
@@ -953,7 +942,7 @@ major_id
 ##### 接口地址：/studentManage/api/note/getOne
 ##### 方法：get
 ##### 参数：
-note_id
+note_id：笔记id
 ##### 请求实例：http://localhost:4000/studentManage/api/note/getOne?note_id=d46a28e0-bd18-11e5-ace2-11edb9ad68d4
 
 ```
@@ -1090,7 +1079,7 @@ type=resource_subject
 ##### 接口地址：/studentManage/api/resource/getAll
 ##### 方法：get
 ##### 参数：
-note_id
+keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/resource/getAll
 
 ```
@@ -1166,16 +1155,17 @@ note_id
 ##### 接口地址：/studentManage/api/resource/list
 ##### 方法：get
 ##### 参数：
-keyword
-major_id
-page
-limit
-##### 请求实例：http://localhost:4000/studentManage/api/resource/list
+keyword：关键字
+subject_id：科目id
+page：页码（默认为1）
+limit：每页条数（默认为10）
+##### 请求实例：http://localhost:4000/studentManage/api/resource/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
 ```
 {
   "code": "200",
   "msg": "获取列表成功！",
+  "count": 2,
   "list": [
     {
       "id": 1,
@@ -1212,45 +1202,8 @@ limit
       "s_count": null,
       "d_count": null,
       "p_count": null
-    },
-    {
-      "id": 3,
-      "resource_id": "adf71a40-bd1a-11e5-9482-4d7e67b0bbbc",
-      "major_id": "0942f900-bcfd-11e5-8cfe-770f2937a8b8",
-      "major_name": "基础医学",
-      "subject_id": "5c9a6c00-bcfd-11e5-8cfe-770f2937a8b8",
-      "subject_name": "[药理学]",
-      "title": "基础医学实验教程",
-      "brief": "基础医学实验教程 2010版  同济大学出版社",
-      "file": "/files/text/基础医学实验教程.docx",
-      "level": null,
-      "datems": "1453035776696",
-      "createdAt": "2016-01-17T13:03:19.000Z",
-      "updatedAt": "2016-01-17T13:03:19.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "id": 6,
-      "resource_id": "affef730-bd25-11e5-ac08-2509145d5986",
-      "major_id": "0942f900-bcfd-11e5-8cfe-770f2937a8b8",
-      "major_name": "基础医学",
-      "subject_id": "5c9a6c00-bcfd-11e5-8cfe-770f2937a8b8",
-      "subject_name": "[药理学]",
-      "title": "1",
-      "brief": "11",
-      "file": "/files/image/bg.png",
-      "level": 1,
-      "datems": "1453040487398",
-      "createdAt": "2016-01-17T14:22:06.000Z",
-      "updatedAt": "2016-01-17T14:31:19.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
     }
-  ],
-  "count": 4
+  ]
 }
 
 ```
@@ -1259,7 +1212,7 @@ limit
 ##### 接口地址：/studentManage/api/resource/getOne
 ##### 方法：get
 ##### 参数：
-resource_id
+resource_id：资源ID
 ##### 请求实例：http://localhost:4000/studentManage/api/resource/getOne?resource_id=adf71a40-bd1a-11e5-9482-4d7e67b0bbbc
 
 ```
@@ -1387,7 +1340,9 @@ type=subscription
 ##### 接口地址：/studentManage/api/news/list
 ##### 方法：get
 ##### 参数：
-type_id
+type_id：新闻类型id
+page：页码（默认为1）
+limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/news/list?type_id=5811dda0-b2ec-11e5-a306-33448f6b146a
 
 ```
@@ -1442,7 +1397,7 @@ type_id
 ##### 接口地址：/studentManage/api/news/getOne
 ##### 方法：get
 ##### 参数：
-news_id
+news_id：新闻id
 ##### 请求实例：http://localhost:4000/studentManage/api/news/getOne?news_id=35087d60-a85a-11e5-aa1d-11c0314c8644
 
 ```
@@ -1479,7 +1434,7 @@ news_id
 ##### 接口地址：/studentManage/api/community/list
 ##### 方法：get
 ##### 参数：
-keyword
+keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/community/list
 
 ```
@@ -1516,7 +1471,7 @@ keyword
 ##### 接口地址：/studentManage/api/community/getOne
 ##### 方法：get
 ##### 参数：
-community_id
+community_id：社区id
 ##### 请求实例：http://localhost:4000/studentManage/api/community/getOne?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
 ```
@@ -1577,7 +1532,10 @@ community_id
 ##### 接口地址：/studentManage/api/post/list
 ##### 方法：get
 ##### 参数：
-community_id
+community_id：社区id
+keyword：关键字
+page：页码（默认为1）
+limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
 ```
@@ -1624,11 +1582,11 @@ community_id
 ```
 <a name="获取帖子详情"></a>
 #### 2.6.4 获取帖子详情，及评论列表
-##### 接口地址：/studentManage/api/post/list
+##### 接口地址：/studentManage/api/post/getOne
 ##### 方法：get
 ##### 参数：
-community_id
-##### 请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
+post_id：帖子id
+##### 请求实例：http://localhost:4000/studentManage/api/post/getOne?post_id=4732fa80-a63c-11e5-bda2-a16c423e1024
 
 ```
 {
