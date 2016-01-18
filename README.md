@@ -335,9 +335,9 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/course/list
 ##### 方法：get
 ##### 参数：
-major_id：专业id
-keyword：关键字
-page：页码（默认为1）
+major_id：专业id；
+keyword：关键字；
+page：页码（默认为1）；
 limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/course/list?major_id=2d92b270-bcfb-11e5-8cfe-770f2937a8b8
 
@@ -635,9 +635,9 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/exam/list
 ##### 方法：get
 ##### 参数：
-subject_id：科目id
-keyword：关键字
-page：页码（默认为1）
+subject_id：科目id；
+keyword：关键字；
+page：页码（默认为1）；
 limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/exam/list?subject_id=69265b10-bcfc-11e5-8cfe-770f2937a8b8
 
@@ -830,7 +830,8 @@ type=note_subject
 #### 2.3.3 获取笔记列表
 ##### 接口地址：/studentManage/api/note/getAll
 ##### 方法：get
-##### 参数：keyword：关键字
+##### 参数：
+keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/note/getAll
 
 ```
@@ -888,9 +889,9 @@ type=note_subject
 ##### 接口地址：/studentManage/api/note/list
 ##### 方法：get
 ##### 参数：
-keyword：关键字
-subject_id：科目id
-page：页码（默认为1）
+keyword：关键字；
+subject_id：科目id；
+page：页码（默认为1）；
 limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/note/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
@@ -1155,9 +1156,9 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/resource/list
 ##### 方法：get
 ##### 参数：
-keyword：关键字
-subject_id：科目id
-page：页码（默认为1）
+keyword：关键字；
+subject_id：科目id；
+page：页码（默认为1）；
 limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/resource/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
@@ -1340,8 +1341,8 @@ type=subscription
 ##### 接口地址：/studentManage/api/news/list
 ##### 方法：get
 ##### 参数：
-type_id：新闻类型id
-page：页码（默认为1）
+type_id：新闻类型id；
+page：页码（默认为1）；
 limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/news/list?type_id=5811dda0-b2ec-11e5-a306-33448f6b146a
 
@@ -1532,9 +1533,9 @@ community_id：社区id
 ##### 接口地址：/studentManage/api/post/list
 ##### 方法：get
 ##### 参数：
-community_id：社区id
-keyword：关键字
-page：页码（默认为1）
+community_id：社区id；
+keyword：关键字；
+page：页码（默认为1）；
 limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
