@@ -48,12 +48,14 @@
 	  * [2.6.3 获取帖子列表](#获取帖子列表)
 	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
  *  [2.7 用户相关](#用户相关)
-	  * [2.6.1 获取社区列表](#获取社区列表)
-	  *  [2.6.2 获取社区详情，及帖子列表](#获取社区详情)
-	  * [2.6.3 获取帖子列表](#获取帖子列表)
-	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
-	
-
+	  * [2.7.1 获取我收藏的课程](#获取社区列表)
+	  * [2.7.2 获取我收藏的试卷](#获取社区详情)
+	  * [2.7.3 获取我收藏的笔记](#获取我收藏的笔记)
+	  * [2.7.4 获取我收藏的新闻](#获取我收藏的新闻)
+	  * [2.7.5 获取我的错题](#获取我的错题)
+	  * [2.7.6 获取我关注的社区](#获取我关注的社区)
+	  * [2.7.7 获取我关注的新闻标签](#获取我关注的新闻标签)
+	  
 <a name="项目介绍"></a>
 ### 项目介绍
 
@@ -1631,6 +1633,330 @@ post_id：帖子id
 ```
 <a name="用户相关"></a>
 ### 2.7 用户相关
+
+<a name="获取我收藏的课程"></a>
+#### 2.7.1 获取我收藏的课程
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type= course
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=course
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 2,
+      "course_id": "e50b6d20-bd9b-11e5-bfd4-dbfa9e5ccea7",
+      "major_id": "2d92b270-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "title": "基础医学导论视频教程",
+      "icon": "/files/image/1.jpg",
+      "brief": "浙江大学",
+      "datems": "1453090908594",
+      "createdAt": "2016-01-18T04:28:16.000Z",
+      "updatedAt": "2016-01-18T04:28:16.000Z"
+    },
+    {
+      "id": 1,
+      "course_id": "85ad17d0-bd13-11e5-9a2d-27445d93409c",
+      "major_id": "2d92b270-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "title": "基础医学实验(甲) 陆源 全7讲 浙江大学",
+      "icon": "/files/image/u=350803863,768178692&fm=21&gp=0 (1).jpg",
+      "brief": "主讲人（\r\n\r\n陆源 浙江大学\r\n\r\n）",
+      "datems": "1453032631713",
+      "createdAt": "2016-01-17T12:12:04.000Z",
+      "updatedAt": "2016-01-17T12:33:53.000Z"
+    }
+  ]
+}
+```
+<a name="获取我收藏的试卷"></a>
+#### 2.7.2 获取我收藏的试卷
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type=exam
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=exam
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 11,
+      "exam_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
+      "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "subject_id": "69265b10-bcfc-11e5-8cfe-770f2937a8b8",
+      "subject_name": "药理学",
+      "icon": null,
+      "name": "[药物代谢动力学]",
+      "brief": "药理学特色课程",
+      "level": null,
+      "datems": "1453014632009",
+      "createdAt": "2016-01-17T11:53:07.000Z",
+      "updatedAt": "2016-01-17T11:53:07.000Z"
+    },
+    {
+      "id": 12,
+      "exam_id": "6dea1280-bd9d-11e5-b900-59869364e3c1",
+      "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "subject_id": "69265b10-bcfc-11e5-8cfe-770f2937a8b8",
+      "subject_name": "药理学",
+      "icon": null,
+      "name": "医学基础知识试题",
+      "brief": "百度文库",
+      "level": null,
+      "datems": "1453091743664",
+      "createdAt": "2016-01-18T04:39:15.000Z",
+      "updatedAt": "2016-01-18T04:39:15.000Z"
+    }
+  ]
+}
+```
+<a name="获取我收藏的笔记"></a>
+#### 2.7.3 获取我收藏的笔记
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type=note
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=note
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 4,
+      "level": 1,
+      "note_id": "d46a28e0-bd18-11e5-ace2-11edb9ad68d4",
+      "major_id": "a75077f0-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "subject_id": "2858a130-bd18-11e5-ace2-11edb9ad68d4",
+      "subject_name": "[生理学]",
+      "title": "中医基础理论 ",
+      "content": "<p>\r\n<div>第一单元 中医学理论体系的主要特点<br>\r\n<br>\r\n细目一：整体观念<br>\r\n<br>\r\n1、整体观念的概念：整体观念是中医学关于人体自身的完整性及人与自然、社会环境的统<br>\r\n<br>\r\n一性的认识。<br>\r\n<br>\r\n2、整体观念的内容：1.人体是一个有机整体。<br>\r\n<br>\r\n2.人与自然环境的统一性。<br>\r\n<br>\r\n3.人与社会环境的统一性。<br>\t<a target=\"_blank\" rel=\"nofollow\" href=\"http://ww",
+      "datems": "1453032994594",
+      "createdAt": "2016-01-17T12:50:04.000Z",
+      "updatedAt": "2016-01-17T14:39:07.000Z"
+    }
+  ]
+}
+```
+<a name="获取我收藏的新闻"></a>
+#### 2.7.4 获取我收藏的新闻
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type=news
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=news
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 1,
+      "news_id": "35087d60-a85a-11e5-aa1d-11c0314c8644",
+      "level": 1,
+      "type_id": "5811dda0-b2ec-11e5-a306-33448f6b146a",
+      "type_name": "热门",
+      "title": "新闻标题",
+      "brief": "新闻简介",
+      "icon": "http://icon.com",
+      "content": "新闻内容：本课程通过总结常见的分页样式以及分析对比分页原理以及实现方式，通过代码实例，让你轻松学会分页功能的开发。通过学习本课程，你也能轻松的实现fac",
+      "html": "0",
+      "from": "网易新闻",
+      "datems": "1450754109494",
+      "createdAt": "2015-12-22T03:23:08.000Z",
+      "updatedAt": "2016-01-17T14:02:27.000Z"
+    },
+    {
+      "id": 2,
+      "news_id": "91a46ab0-a85b-11e5-97b9-87d706f510eb",
+      "level": 1,
+      "type_id": "5811dda0-b2ec-11e5-a306-33448f6b146a",
+      "type_name": "热门",
+      "title": "78岁老太网上卖叶子:每天早8点抢订单 分秒必争",
+      "brief": "在彩公司(irodori)社长横石知二指导下,乡村的阿婆做起上网卖叶子的生意,",
+      "icon": "/files/image/Koala.jpg",
+      "content": "环球网  2015年12月21日 19:00 在彩公司(irodori)社长横石知二指导下,乡村的阿婆做起上网卖叶子的生意,有人年收入逾1000万日圆。 “被钱围绕着,天天都开心”,住在日本德岛县上胜町78岁",
+      "html": null,
+      "from": "环球网",
+      "datems": "1452243620863",
+      "createdAt": "2015-12-22T03:24:54.000Z",
+      "updatedAt": "2016-01-17T14:03:33.000Z"
+    }
+  ]
+}
+```
+
+<a name="获取我的错题"></a>
+#### 2.7.5 获取我的错题
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type=wrong
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=wrong
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 25,
+      "examitem_id": "a81e47a0-bd9d-11e5-b900-59869364e3c1",
+      "parent_id": "6dea1280-bd9d-11e5-b900-59869364e3c1",
+      "parent_name": "医学基础知识试题",
+      "type": "0",
+      "content": "人的呼吸系统包括呼吸道和     (C)",
+      "answer": "2,",
+      "analysis": "",
+      "selects": "心   ,肝,肺   ,脾",
+      "datems": "1453091743664",
+      "createdAt": "2016-01-18T04:40:53.000Z",
+      "updatedAt": "2016-01-18T04:40:53.000Z"
+    },
+    {
+      "id": 23,
+      "examitem_id": "3278f630-bd11-11e5-8cfe-770f2937a8b8",
+      "parent_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
+      "parent_name": "[药物代谢动力学]",
+      "type": "0",
+      "content": "某弱酸药物pka=3.4,在血浆中解离百分率约：",
+      "answer": "4",
+      "analysis": "17865200985: ，PH-PKa=7.4-3.4=4, 离子型/非离子型=10的4次方=10000 解离百分率=离子型/（离子型+非离子型）=10000/10001=99.99%",
+      "selects": "10%,90%,99%,99.9%,99.99%",
+      "datems": "1453014632009",
+      "createdAt": "2016-01-17T11:55:26.000Z",
+      "updatedAt": "2016-01-17T12:03:52.000Z"
+    }
+  ]
+}
+```
+
+
+<a name="获取我关注的社区"></a>
+#### 2.7.6 获取我关注的社区
+##### 接口地址：/studentManage/api/obj_operation/myFocus
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type=coummunity
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=coummunity
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 9,
+      "community_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "name": "医学生",
+      "title": "白衣天使医学生",
+      "icon": "/files/image/u=3017883673,869767310&fm=11&gp=0.jpg",
+      "createdAt": "2016-01-04T14:10:02.000Z",
+      "updatedAt": "2016-01-04T14:10:02.000Z"
+    },
+    {
+      "id": 13,
+      "community_id": "95e8d500-bcfd-11e5-8cfe-770f2937a8b8",
+      "name": "晒身边",
+      "title": "晒晒更健康",
+      "icon": "/files/image/u=890810284,2099347886&fm=21.jpg",
+      "createdAt": "2016-01-17T09:35:03.000Z",
+      "updatedAt": "2016-01-17T09:35:03.000Z"
+    }
+  ]
+}
+```
+
+<a name="获取我关注的新闻标签"></a>
+#### 2.7.7 获取我关注的新闻标签
+##### 接口地址：/studentManage/api/obj_operation/myFocus
+##### 方法：get
+##### 参数：
+user_id: 用户id
+type=subscription
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=subscription
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 22,
+      "type_id": "4f72ae90-b2ec-11e5-a306-33448f6b146a",
+      "icon": "",
+      "name": "推荐",
+      "type": "subscription",
+      "parent_id": "",
+      "parent_name": "",
+      "createdAt": "2016-01-04T14:06:11.000Z",
+      "updatedAt": "2016-01-04T14:06:11.000Z"
+    },
+    {
+      "id": 24,
+      "type_id": "5f8de970-b2ec-11e5-a306-33448f6b146a",
+      "icon": "",
+      "name": "医学最前沿",
+      "type": "subscription",
+      "parent_id": "",
+      "parent_name": "",
+      "createdAt": "2016-01-04T14:06:38.000Z",
+      "updatedAt": "2016-01-04T14:06:38.000Z"
+    }
+  ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
