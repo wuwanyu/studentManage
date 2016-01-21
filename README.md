@@ -1639,7 +1639,7 @@ post_id：帖子id
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type= course
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=course
 
@@ -1680,7 +1680,7 @@ type= course
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type=exam
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=exam
 
@@ -1727,7 +1727,7 @@ type=exam
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type=note
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=note
 
@@ -1758,7 +1758,7 @@ type=note
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type=news
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=news
 
@@ -1808,7 +1808,7 @@ type=news
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type=wrong
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=wrong
 
@@ -1855,7 +1855,7 @@ type=wrong
 ##### 接口地址：/studentManage/api/obj_operation/myFocus
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type=coummunity
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=coummunity
 
@@ -1891,7 +1891,7 @@ type=coummunity
 ##### 接口地址：/studentManage/api/obj_operation/myFocus
 ##### 方法：get
 ##### 参数：
-user_id: 用户id
+user_id: 用户id；
 type=subscription
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=subscription
 
