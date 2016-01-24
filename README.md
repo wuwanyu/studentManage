@@ -58,8 +58,8 @@
 	  
 <a name="项目介绍"></a>
 ### 项目介绍
-ip地址：120.25.124.68
-接口访问地址：http://120.25.124.68:4000/studentManage/api/type/findListByType?type=course_major
+##### ip地址：120.25.124.68
+##### 接口访问地址：http://120.25.124.68:4000/studentManage/api/type/findListByType?type=course_major
 
 <a name="数据库表设计"></a>
 ### 数据库表设计
