@@ -55,7 +55,8 @@
 	  * [2.7.5 获取我的错题](#获取我的错题)
 	  * [2.7.6 获取我关注的社区](#获取我关注的社区)
 	  * [2.7.7 获取我关注的新闻标签](#获取我关注的新闻标签)
-	  
+	  * [2.7.8 用户登录](#用户登录)
+	  * [2.7.9 用户注册](#用户注册)
 <a name="项目介绍"></a>
 ### 项目介绍
 ##### ip地址：120.25.124.68
@@ -237,7 +238,7 @@
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=course_major
+- type=course_major
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=course_major
 
 ```
@@ -297,7 +298,7 @@ type=course_major
 ##### 接口地址：/studentManage/api/course/getAll
 ##### 方法：get
 ##### 参数：
-keyword：关键字
+- keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/course/getAll
 
 ```
@@ -338,10 +339,10 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/course/list
 ##### 方法：get
 ##### 参数：
-major_id：专业id；
-keyword：关键字；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
+- major_id：专业id；
+- keyword：关键字；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/course/list?major_id=2d92b270-bcfb-11e5-8cfe-770f2937a8b8
 
 ```
@@ -388,7 +389,7 @@ limit：每页条数（默认为10）
 ##### 接口地址：/studentManage/api/course/getOne
 ##### 方法：get
 ##### 参数：
-courseid：课程id
+- courseid：课程id
 ##### 请求实例：http://localhost:4000/studentManage/api/course/getOne?course_id=85ad17d0-bd13-11e5-9a2d-27445d93409c
 
 ```
@@ -457,7 +458,7 @@ courseid：课程id
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=exam_major
+- type=exam_major
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=exam_major
 
 ```
@@ -517,7 +518,7 @@ type=exam_major
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=exam_subject
+- type=exam_subject
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=exam_subject
 
 ```
@@ -555,7 +556,7 @@ type=exam_subject
 ##### 接口地址：/studentManage/api/exam/findAll
 ##### 方法：get
 ##### 参数：
-keyword：关键字
+- keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/exam/findAll
 
 ```
@@ -608,10 +609,10 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/exam/list
 ##### 方法：get
 ##### 参数：
-subject_id：科目id；
-keyword：关键字；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
+- subject_id：科目id；
+- keyword：关键字；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/exam/list?subject_id=69265b10-bcfc-11e5-8cfe-770f2937a8b8
 
 ```
@@ -664,7 +665,7 @@ limit：每页条数（默认为10）
 ##### 接口地址：/studentManage/api/exam/getOne
 ##### 方法：get
 ##### 参数：
-exam_id：试卷id
+- exam_id：试卷id
 ##### 请求实例：http://localhost:4000/studentManage/api/exam/getOne?exam_id=df8a5720-bd10-11e5-8cfe-770f2937a8b8
 
 ```
@@ -728,7 +729,7 @@ exam_id：试卷id
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=note_major
+- type=note_major
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=note_major
 
 ```
@@ -766,7 +767,7 @@ type=note_major
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=note_subject
+- type=note_subject
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=note_subject
 
 ```
@@ -804,7 +805,7 @@ type=note_subject
 ##### 接口地址：/studentManage/api/note/getAll
 ##### 方法：get
 ##### 参数：
-keyword：关键字
+- keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/note/getAll
 
 ```
@@ -862,10 +863,10 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/note/list
 ##### 方法：get
 ##### 参数：
-keyword：关键字；
-subject_id：科目id；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
+- keyword：关键字；
+- subject_id：科目id；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/note/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
 ```
@@ -916,7 +917,7 @@ limit：每页条数（默认为10）
 ##### 接口地址：/studentManage/api/note/getOne
 ##### 方法：get
 ##### 参数：
-note_id：笔记id
+- note_id：笔记id
 ##### 请求实例：http://localhost:4000/studentManage/api/note/getOne?note_id=d46a28e0-bd18-11e5-ace2-11edb9ad68d4
 
 ```
@@ -949,7 +950,7 @@ note_id：笔记id
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=resource_major
+- type=resource_major
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_major
 
 ```
@@ -977,7 +978,7 @@ type=resource_major
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=resource_subject
+- type=resource_subject
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_subject
 
 ```
@@ -1015,7 +1016,7 @@ type=resource_subject
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=resource_subject
+- type=resource_subject
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_subject
 
 ```
@@ -1053,7 +1054,7 @@ type=resource_subject
 ##### 接口地址：/studentManage/api/resource/getAll
 ##### 方法：get
 ##### 参数：
-keyword：关键字
+- keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/resource/getAll
 
 ```
@@ -1129,10 +1130,10 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/resource/list
 ##### 方法：get
 ##### 参数：
-keyword：关键字；
-subject_id：科目id；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
+- keyword：关键字；
+- subject_id：科目id；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/resource/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
 ```
@@ -1186,7 +1187,7 @@ limit：每页条数（默认为10）
 ##### 接口地址：/studentManage/api/resource/getOne
 ##### 方法：get
 ##### 参数：
-resource_id：资源ID
+- resource_id：资源ID
 ##### 请求实例：http://localhost:4000/studentManage/api/resource/getOne?resource_id=adf71a40-bd1a-11e5-9482-4d7e67b0bbbc
 
 ```
@@ -1221,7 +1222,7 @@ resource_id：资源ID
 ##### 接口地址：/studentManage/api/type/findListByType
 ##### 方法：get
 ##### 参数：
-type=subscription
+- type=subscription
 ##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=subscription
 
 ```
@@ -1314,9 +1315,9 @@ type=subscription
 ##### 接口地址：/studentManage/api/news/list
 ##### 方法：get
 ##### 参数：
-type_id：新闻类型id；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
+- type_id：新闻类型id；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/news/list?type_id=5811dda0-b2ec-11e5-a306-33448f6b146a
 
 ```
@@ -1371,7 +1372,7 @@ limit：每页条数（默认为10）
 ##### 接口地址：/studentManage/api/news/getOne
 ##### 方法：get
 ##### 参数：
-news_id：新闻id
+- news_id：新闻id
 ##### 请求实例：http://localhost:4000/studentManage/api/news/getOne?news_id=35087d60-a85a-11e5-aa1d-11c0314c8644
 
 ```
@@ -1408,7 +1409,7 @@ news_id：新闻id
 ##### 接口地址：/studentManage/api/community/list
 ##### 方法：get
 ##### 参数：
-keyword：关键字
+- keyword：关键字
 ##### 请求实例：http://localhost:4000/studentManage/api/community/list
 
 ```
@@ -1445,7 +1446,7 @@ keyword：关键字
 ##### 接口地址：/studentManage/api/community/getOne
 ##### 方法：get
 ##### 参数：
-community_id：社区id
+- community_id：社区id
 ##### 请求实例：http://localhost:4000/studentManage/api/community/getOne?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
 ```
@@ -1506,10 +1507,10 @@ community_id：社区id
 ##### 接口地址：/studentManage/api/post/list
 ##### 方法：get
 ##### 参数：
-community_id：社区id；
-keyword：关键字；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
+- community_id：社区id；
+- keyword：关键字；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 ##### 请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
 ```
@@ -1559,7 +1560,7 @@ limit：每页条数（默认为10）
 ##### 接口地址：/studentManage/api/post/getOne
 ##### 方法：get
 ##### 参数：
-post_id：帖子id
+- post_id：帖子id
 ##### 请求实例：http://localhost:4000/studentManage/api/post/getOne?post_id=4732fa80-a63c-11e5-bda2-a16c423e1024
 
 ```
@@ -1610,8 +1611,8 @@ post_id：帖子id
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type= course
+- user_id: 用户id；
+- type= course
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=course
 
 ```
@@ -1651,8 +1652,8 @@ type= course
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type=exam
+- user_id: 用户id；
+- type=exam
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=exam
 
 ```
@@ -1698,8 +1699,8 @@ type=exam
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type=note
+- user_id: 用户id；
+- type=note
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=note
 
 ```
@@ -1729,8 +1730,8 @@ type=note
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type=news
+- user_id: 用户id；
+- type=news
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=news
 
 ```
@@ -1779,8 +1780,8 @@ type=news
 ##### 接口地址：/studentManage/api/obj_operation/myCollection
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type=wrong
+- user_id: 用户id；
+- type=wrong
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=wrong
 
 ```
@@ -1826,8 +1827,8 @@ type=wrong
 ##### 接口地址：/studentManage/api/obj_operation/myFocus
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type=coummunity
+- user_id: 用户id；
+-  type=coummunity
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=coummunity
 
 ```
@@ -1862,8 +1863,8 @@ type=coummunity
 ##### 接口地址：/studentManage/api/obj_operation/myFocus
 ##### 方法：get
 ##### 参数：
-user_id: 用户id；
-type=subscription
+- user_id: 用户id；
+- type=subscription
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=subscription
 
 ```
@@ -1896,6 +1897,114 @@ type=subscription
   ]
 }
 ```
+
+
+<a name="用户登录"></a>
+#### 2.7.8 用户登录
+##### 接口地址：/studentManage/api/user/login
+##### 方法：post
+##### 参数：
+- account: 账号（例如：wuwanyu_321@163.com）；
+- psw: 密码（例如： 123）
+##### 请求实例：http://localhost:4000/studentManage/api/user/login
+
+- 登录成功
+```
+{
+  "code": "200",
+  "msg": "登录成功！",
+  "user": {
+    "user_id": "6a3eb1f0-ad2f-11e5-9ec1-cbdc2e34acc2",
+    "name": "wuwanyu",
+    "psw": "123",
+    "account": "wuwanyu_321@163.com",
+    "school": "西北大学",
+    "major": "软件工程",
+    "points": "10",
+    "datems": null,
+    "type": "student",
+    "icon": "/files/image/Tulips.jpg",
+    "desc": null,
+    "createdAt": "2015-12-28T06:52:57.000Z",
+    "updatedAt": "2015-12-28T06:52:57.000Z",
+    "id": 4
+  }
+}
+```
+- 登录失败：密码输入错误
+```
+{
+  "code": "203",
+  "msg": "密码输入错误！"
+}
+```
+- 登录失败：账号不存在
+```
+{
+  "code": "202",
+  "msg": "账号不存在！"
+}
+```
+
+
+
+<a name="用户注册"></a>
+#### 2.7.9 用户注册
+##### 接口地址：/studentManage/api/user/reg
+##### 方法：post
+##### 参数：
+- account: 账号，例如：HerryPoter@163.com
+- psw:密码，例如： 111111
+- name: 用户名，例如：HerryPoter
+- school: 学校，例如：哈佛大学（非必须）
+- major: 专业，例如：魔法专业（非必须）
+- icon:：头像，例如： http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg（非必须）
+
+##### 请求实例：http://localhost:4000/studentManage/api/user/reg
+
+- 注册成功
+```
+{
+  "code": "200",
+  "msg": "注册成功！",
+  "item": {
+    "account": "HerryPoter@163.com",
+    "psw": "111111",
+    "name": "HerryPoter",
+    "school": "哈佛大学",
+    "major": "魔法专业",
+    "icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
+    "user_id": "c7318520-dbd0-11e5-85bf-7b6030e90180",
+    "points": "10",
+    "datems": "1456412200184",
+    "type": "student",
+    "createdAt": "2016-02-25T15:02:24.629Z",
+    "updatedAt": "2016-02-25T15:02:24.629Z",
+    "id": 10
+  }
+}
+```
+- 注册失败：账号已经存在
+```
+{
+  "code": "400",
+  "msg": "该账号已经注册！"
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
