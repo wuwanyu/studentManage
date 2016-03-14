@@ -1403,10 +1403,10 @@
 
 ``` 
 
-* [2.4.7 点赞资源](#点赞资源)
+
 
 <a name="点赞资源"></a>
-#### 2.4.5 点赞资源
+#### 2.4.7 点赞资源
 ##### 接口地址：/studentManage/api/obj_operation/add
 ##### 方法：post
 ##### 参数：
@@ -1960,7 +1960,7 @@
 
 <a name="关注社区"></a>
 #### 2.6.6 关注社区
-##### 接口地址：/studentManage/api/post/add
+##### 接口地址：/studentManage/api/obj_operation/add
 ##### 方法：post
 ##### 参数：
 - obj_id = 社区id
