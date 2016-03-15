@@ -1928,30 +1928,34 @@
 <a name="发帖"></a>
 #### 2.6.5 发帖
 ##### 接口地址：/studentManage/api/post/add
-##### 方法：post
+##### 方法：post(form-data)
 ##### 参数：
 - parent_id：所属社区id
 - parent_name：所属社区
 - title：帖子标题
 - content：帖子内容
+- images: 上传图片
+
 
 ```
 {
   "code": "200",
   "msg": "创建成功！",
   "post": {
-    "post_id": "e70efd30-e8fc-11e5-9791-c97fe06066d4",
-    "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-    "parent_name": "医学生",
-    "user_id": null,
-    "user_name": null,
-    "title": "医学生测试",
-    "content": "医学生内容",
+    "post_id": "00c5fa30-eaab-11e5-85f8-05ebc4dc7db8",
+    "parent_id": "1",
+    "parent_name": "1",
+    "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+    "user_name": "HerryPoter",
+    "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
+    "images": "public/file/3bd870116ff9708f5141aa8a374aeabf.jpg,public/file/3bd870116ff9708f5141aa8a374aeabf.jpg",
+    "title": "1",
+    "content": "1",
     "level": 0,
-    "datems": "1457848521813",
-    "createdAt": "2016-03-13T09:21:01.063Z",
-    "updatedAt": "2016-03-13T09:21:01.063Z",
-    "id": 14
+    "datems": "1458045290883",
+    "createdAt": "2016-03-15T12:39:47.802Z",
+    "updatedAt": "2016-03-15T12:39:47.802Z",
+    "id": 22
   }
 }
 ```
