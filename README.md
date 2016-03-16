@@ -1928,14 +1928,13 @@
 <a name="发帖"></a>
 #### 2.6.5 发帖
 ##### 接口地址：/studentManage/api/post/add
-##### 方法：post(form-data)
-##### 参数：
+##### 方法：post
+##### 参数：(form-data)
 - parent_id：所属社区id
 - parent_name：所属社区
 - title：帖子标题
 - content：帖子内容
 - images: 上传图片
-
 
 ```
 {
@@ -2348,13 +2347,14 @@
 #### 2.7.9 用户注册
 ##### 接口地址：/studentManage/api/user/reg
 ##### 方法：post
-##### 参数：
+##### 参数：(form-data)
+
 - account: 账号，例如：HerryPoter@163.com
+- - name: 用户名，例如：HerryPoter
 - psw:密码，例如： 111111
-- name: 用户名，例如：HerryPoter
 - school: 学校，例如：哈佛大学（非必须）
 - major: 专业，例如：魔法专业（非必须）
-- icon:：头像，例如： http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg（非必须）
+- icon: 用户头像，图片文件
 
 ##### 请求实例：http://localhost:4000/studentManage/api/user/reg
 
@@ -2369,7 +2369,7 @@
     "name": "HerryPoter",
     "school": "哈佛大学",
     "major": "魔法专业",
-    "icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
+    "icon": "http://120.25.124.68:4000/upload/image/Koala.jpg",
     "user_id": "c7318520-dbd0-11e5-85bf-7b6030e90180",
     "points": "10",
     "datems": "1456412200184",
