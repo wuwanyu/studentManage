@@ -20,6 +20,8 @@
 	  * [2.1.2 获取课程列表](#获取课程列表)
 	  * [2.1.3 获取课程列表，分页，评论量，点赞量，模糊查询](#获取课程列表1)
 	  * [2.1.4 获取课程详情，及章节列表](#获取课程详情)
+	  * [2.1.5 收藏课程](#收藏课程)
+	  * [2.1.6 点赞课程](#点赞课程)
  *  [2.2 题库相关](#题库相关)
 	  * [2.2.1 获取试卷专业列表](#获取试卷专业列表)
 	  * [2.2.2 获取试卷科目列表](#获取试卷科目列表)
@@ -28,6 +30,9 @@
 	  * [2.2.5 获取试卷详情，及试题列表](#获取试卷详情)
 	  * [2.2.6 收藏试卷](#收藏试卷)
 	  * [2.2.7 点赞试卷](#点赞试卷)
+	  * [2.2.8 收藏试题](#收藏试题)
+	  * [2.2.9 获取我收藏试题的试卷列表](#获取我收藏试题的试卷列表)
+	  * [2.2.10 根据试卷id，获取我收藏试题的列表](#根据试卷id，获取我收藏试题的列表)
  *  [2.3 笔记相关](#笔记相关)
 	  *  [2.3.1 获取笔记专业列表](#获取笔记专业列表)
 	  * [2.3.2 获取笔记科目列表](#获取笔记科目列表) 
@@ -58,6 +63,8 @@
 	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
 	  * [2.6.5 发帖](#发帖)
 	  * [2.6.6 关注社区](#关注社区)
+	  * [2.6.7 获取精选帖列表](#获取精选帖列表)
+	  * [2.6.8 根据社区id，获取置顶贴列表](# 根据社区id，获取置顶贴列表)
  *  [2.7 用户相关](#用户相关)
 	  * [2.7.1 获取我收藏的课程](#获取我收藏的课程)
 	  * [2.7.2 获取我收藏的试卷](#获取我收藏的试卷)
@@ -474,6 +481,60 @@
   ]
 }
 ```
+
+  <a name="收藏课程"></a>
+#### 2.1.5 收藏课程
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 课程id
+- user_id: 用户id
+- type = course
+- operation = s
+
+```
+{
+  "code": "200",
+  "msg": "创建成功！",
+  "item": {
+    "obj_id": "726d2480-e8dd-11e5-9620-594c23421db2",
+    "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+    "type": "course",
+    "operation": "s",
+    "createdAt": "2016-03-14T12:25:11.806Z",
+    "updatedAt": "2016-03-14T12:25:11.806Z",
+    "id": 40
+  }
+}
+```
+
+  <a name="点赞课程"></a>
+#### 2.1.6 点赞课程
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 课程id
+- user_id: 用户id
+- type = course
+- operation = d
+
+```
+{
+  "code": "200",
+  "msg": "创建成功！",
+  "item": {
+    "obj_id": "726d2480-e8dd-11e5-9620-594c23421db2",
+    "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+    "type": "course",
+    "operation": "d",
+    "createdAt": "2016-03-14T12:25:11.806Z",
+    "updatedAt": "2016-03-14T12:25:11.806Z",
+    "id": 40
+  }
+}
+```
+
+
 <a name="题库相关"></a>
 ### 2.2 题库相关
   <a name="获取试卷专业列表"></a>
@@ -807,6 +868,151 @@
 }
 ```
 
+
+
+
+ <a name="收藏试题"></a>
+#### 2.2.8 收藏试题
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 试题id
+- exam_id: 试卷id
+- user_id: 用户id
+- type = collect_examitem
+- operation = s
+
+
+```
+{
+  "code": "200",
+  "msg": "创建成功！",
+  "item": {
+     "parent_id": "ba8201d0-c733-11e5-aefe-9bbbaef0bed1",
+    "obj_id": "726d2480-e8dd-11e5-9620-594c23421db2",
+    "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+    "type": "collect_examitem",
+    "operation": "s",
+    "createdAt": "2016-03-14T12:25:11.806Z",
+    "updatedAt": "2016-03-14T12:25:11.806Z",
+    "id": 40
+  }
+}
+```
+
+
+
+
+ <a name="获取我收藏试题的试卷列表"></a>
+#### 2.2.9 获取我收藏试题的试卷列表
+##### 接口地址：/studentManage/api/obj_operation/getCollectExamByUserId
+##### 方法：get
+##### 参数：
+- user_id: 用户id
+- type = collect_examitem
+
+##### 实例：http://localhost:4000/studentManage/api/obj_operation/getCollectExamByUserId?type=collect_examitem&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 13,
+      "exam_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
+      "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "基础医学",
+      "subject_id": "69265b10-bcfc-11e5-8cfe-770f2937a8b8",
+      "subject_name": "药理学",
+      "icon": null,
+      "name": "绪论",
+      "brief": "绪论",
+      "level": null,
+      "datems": "1453630457581",
+      "createdAt": "2016-01-24T15:38:45.000Z",
+      "updatedAt": "2016-02-29T11:44:17.000Z"
+    },
+    {
+      "id": 21,
+      "exam_id": "ba8201d0-c733-11e5-aefe-9bbbaef0bed1",
+      "major_id": "82cca110-bcfb-11e5-8cfe-770f2937a8b8",
+      "major_name": "临床医学",
+      "subject_id": "50ee0630-c34e-11e5-bb5f-afd956debbb5",
+      "subject_name": "内科学",
+      "icon": null,
+      "name": "肺炎",
+      "brief": "",
+      "level": null,
+      "datems": "1454075656910",
+      "createdAt": "2016-01-30T09:27:49.000Z",
+      "updatedAt": "2016-02-29T11:56:23.000Z"
+    }
+  ]
+}
+```
+
+ <a name="根据试卷id，获取我收藏试题的列表"></a>
+#### 2.2.10 根据试卷id，获取我收藏试题的列表
+##### 接口地址：/studentManage/api/obj_operation/getCollectExamitemListByExamId
+##### 方法：get
+##### 参数：
+- user_id: 用户id
+- type = collect_examitem
+- exam_id:试卷id
+
+##### 实例：http://localhost:4000/studentManage/api/obj_operation/getCollectExamitemListByExamId?type=collect_examitem&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&exam_id=ba8201d0-c733-11e5-aefe-9bbbaef0bed1
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 27,
+      "examitem_id": "4168e210-c354-11e5-bb5f-afd956debbb5",
+      "parent_id": "26e42a50-c352-11e5-bb5f-afd956debbb5",
+      "parent_name": "常见症状",
+      "type": "0",
+      "content": "2/176. 下列哪项是错误的",
+      "answer": "1,",
+      "analysis": "稽留热是指体温恒定的维持在39~40℃以上的高水平，达数天或数周，24小时内体温波动范围不超过1℃。常见于大叶性肺炎、斑疹伤寒及伤寒高热期。",
+      "selects": "稽留热指体温常在39℃以上，达数天或数周，24小时内体温波动范围不超过1℃,弛张热指体温常在39℃以上，24小时内波动范围不超过1℃，且都在正常水平以上,间歇热指体温升高达高峰后持续数小时，又迅速降至正常水平，无热期（间歇期）可持续1天至数天，如此高热期与无热期反复交替出现。,波状热指体温逐渐上升达39℃或以上，数天后又逐渐下降至正常水平，持续数天后又逐渐升高，如此反复多次,不规则热指发热体温曲线无一定规律性",
+      "datems": "1453713901105",
+      "createdAt": "2016-01-25T11:10:34.000Z",
+      "updatedAt": "2016-01-25T11:10:34.000Z"
+    },
+    {
+      "id": 27,
+      "examitem_id": "4168e210-c354-11e5-bb5f-afd956debbb5",
+      "parent_id": "26e42a50-c352-11e5-bb5f-afd956debbb5",
+      "parent_name": "常见症状",
+      "type": "0",
+      "content": "2/176. 下列哪项是错误的",
+      "answer": "1,",
+      "analysis": "稽留热是指体温恒定的维持在39~40℃以上的高水平，达数天或数周，24小时内体温波动范围不超过1℃。常见于大叶性肺炎、斑疹伤寒及伤寒高热期。",
+      "selects": "稽留热指体温常在39℃以上，达数天或数周，24小时内体温波动范围不超过1℃,弛张热指体温常在39℃以上，24小时内波动范围不超过1℃，且都在正常水平以上,间歇热指体温升高达高峰后持续数小时，又迅速降至正常水平，无热期（间歇期）可持续1天至数天，如此高热期与无热期反复交替出现。,波状热指体温逐渐上升达39℃或以上，数天后又逐渐下降至正常水平，持续数天后又逐渐升高，如此反复多次,不规则热指发热体温曲线无一定规律性",
+      "datems": "1453713901105",
+      "createdAt": "2016-01-25T11:10:34.000Z",
+      "updatedAt": "2016-01-25T11:10:34.000Z"
+    },
+    {
+      "id": 23,
+      "examitem_id": "3278f630-bd11-11e5-8cfe-770f2937a8b8",
+      "parent_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
+      "parent_name": "药物代谢动力学",
+      "type": "0",
+      "content": "某弱酸药物pka=3.4,在血浆中解离百分率约：",
+      "answer": "4",
+      "analysis": "17865200985: ，PH-PKa=7.4-3.4=4, 离子型/非离子型=10的4次方=10000 解离百分率=离子型/（离子型+非离子型）=10000/10001=99.99%",
+      "selects": "10%,90%,99%,99.9%,99.99%",
+      "datems": "1453014632009",
+      "createdAt": "2016-01-17T11:55:26.000Z",
+      "updatedAt": "2016-01-17T12:03:52.000Z"
+    }
+  ]
+}
+```
 
 
 
@@ -1990,6 +2196,180 @@
 
 
 
+<a name="获取精选帖列表"></a>
+#### 2.6.7 获取精选帖列表
+##### 接口地址：/studentManage/api/post/goodlist
+##### 方法：get
+##### 参数：
+
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 1,
+      "post_id": "post01",
+      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
+      "parent_name": "医学生",
+      "title": "新人报道，望多多指教",
+      "content": "0",
+      "images": null,
+      "level": 2,
+      "user_id": "user01",
+      "user_name": "wuwanyu",
+      "user_icon": null,
+      "datems": "3454422",
+      "createdAt": null,
+      "updatedAt": "2016-03-13T11:16:20.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    },
+    {
+      "id": 2,
+      "post_id": "post02",
+      "parent_id": "95e8d500-bcfd-11e5-8cfe-770f2937a8b8",
+      "parent_name": "晒身边",
+      "title": "小烦恼没什么大不了",
+      "content": "0",
+      "images": null,
+      "level": 2,
+      "user_id": "user02",
+      "user_name": "chenguang",
+      "user_icon": null,
+      "datems": "3454422",
+      "createdAt": null,
+      "updatedAt": "2016-03-13T11:16:23.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    },
+    {
+      "id": 5,
+      "post_id": "223efcd0-bd1e-11e5-8867-73161ac92107",
+      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "parent_name": "医学生",
+      "title": "关于基础医学的一些疑问",
+      "content": "今天学了基础医学的一些课程，发现自己好多不懂得...",
+      "images": null,
+      "level": 2,
+      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+      "user_name": "wuwanyu",
+      "user_icon": null,
+      "datems": "1453037282590",
+      "createdAt": "2016-01-17T13:34:49.000Z",
+      "updatedAt": "2016-01-17T13:37:17.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    },
+    {
+      "id": 10,
+      "post_id": "e4007ba0-e541-11e5-85a9-b5063fca5f8b",
+      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "parent_name": "医学生",
+      "title": "测试来了",
+      "content": "我是过来测试哒",
+      "images": null,
+      "level": 2,
+      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+      "user_name": "wuwanyu",
+      "user_icon": null,
+      "datems": "1457450512284",
+      "createdAt": "2016-03-08T15:24:46.000Z",
+      "updatedAt": "2016-03-08T15:24:46.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    },
+    {
+      "id": 12,
+      "post_id": "ba001d00-e542-11e5-ae05-cb9952b81b77",
+      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "parent_name": "医学生",
+      "title": "测试来了",
+      "content": "我是过来测试哒",
+      "images": null,
+      "level": 2,
+      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+      "user_name": "wuwanyu",
+      "user_icon": null,
+      "datems": "1457450835695",
+      "createdAt": "2016-03-08T15:30:45.000Z",
+      "updatedAt": "2016-03-08T15:30:45.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    }
+  ],
+  "count": 5
+}
+```
+
+<a name="根据社区id，获取置顶贴列表"></a>
+#### 2.6.8 根据社区id，获取置顶贴列表
+##### 接口地址：/studentManage/api/post/toplist
+##### 方法：get
+
+##### 参数：
+- community_id：社区id
+
+##### 返回值：
+```
+{
+  "code": "200",
+  "msg": "获取列表成功！",
+  "list": [
+    {
+      "id": 4,
+      "post_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "parent_name": "医学生",
+      "title": "我的苦逼考研日记",
+      "content": "我的苦逼考研日记内容",
+      "images": null,
+      "level": 1,
+      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+      "user_name": "杨梅",
+      "user_icon": null,
+      "datems": "1450521352744",
+      "createdAt": "2015-12-19T10:36:45.000Z",
+      "updatedAt": "2016-03-13T10:50:12.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    },
+    {
+      "id": 11,
+      "post_id": "ea1619a0-e541-11e5-85a9-b5063fca5f8b",
+      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
+      "parent_name": "医学生",
+      "title": "测试来了",
+      "content": "我是过来测试哒",
+      "images": null,
+      "level": 1,
+      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
+      "user_name": "wuwanyu",
+      "user_icon": null,
+      "datems": "1457450512284",
+      "createdAt": "2016-03-08T15:24:56.000Z",
+      "updatedAt": "2016-03-13T10:50:15.000Z",
+      "s_count": null,
+      "d_count": null,
+      "p_count": null
+    }
+  ],
+  "count": 2
+}
+```
+
+
+
+
+
+
+
 <a name="用户相关"></a>
 ### 2.7 用户相关
 
@@ -2387,6 +2767,7 @@
   "msg": "该账号已经注册！"
 }
 ```
+
 
 
 
