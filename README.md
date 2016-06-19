@@ -761,7 +761,7 @@
 {
   "code": "200",
   "msg": "获取信息成功！",
-  "item": {   //试卷信息
+  "item": {
     "id": 13,
     "exam_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
     "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
@@ -779,7 +779,21 @@
     "d_count": null,
     "p_count": null
   },
-  "examitemList": [  //试题列表
+  "examitemList": [
+    {
+      "id": 40,
+      "examitem_id": "fd0435e0-361a-11e6-a2b5-d34754e75c61",
+      "parent_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
+      "parent_name": "绪论",
+      "type": "2",
+      "content": "作为面试官招聘前端开发人员的提问准备",
+      "answer": "1.你的简历中罗列了许多你曾经参与过的项目，你能说说你其中你觉得最好的项目么？你所使用的技术，担任的角色？最让你自豪的是哪一点？(如果没有项目，请罗列自己学过哪些内容，最擅长哪些内容？)★★★\r\n提问理由：个人简历中一般都会罗列很多参与过的项目，通过讨论其最自豪的项目可以了解此人的角色、擅长点和自我期望。如果没有项目则至少应该提出学过哪些内容（例如那些自学的或是培训班出来的），否则难以证明此人有足够的经验胜任。\r\n2.我们搞技术的人，总是要面临不断学习的问题。请问你最近看的技术类论坛或者牛人博客是什么？有",
+      "analysis": "（略）详见答案",
+      "selects": "[{\"$$hashKey\":\"003\",\"answer\":false}]",
+      "datems": "1466340022334",
+      "createdAt": "2016-06-19T12:40:22.000Z",
+      "updatedAt": "2016-06-19T12:40:22.000Z"
+    },
     {
       "id": 39,
       "examitem_id": "c864c2e0-3602-11e6-a2b5-d34754e75c61",
@@ -801,7 +815,7 @@
       "parent_name": "绪论",
       "type": "0",
       "content": "你有几只狗？",
-      "answer": "",
+      "answer": "B",
       "analysis": "根据自己的实际情况回答",
       "selects": "[{\"$$hashKey\":\"003\",\"answer\":false,\"question\":\"1\"},{\"$$hashKey\":\"01L\",\"answer\":true,\"question\":\"2\"},{\"$$hashKey\":\"01N\",\"answer\":false,\"question\":\"3\"}]",
       "datems": "1466328505004",
@@ -809,20 +823,34 @@
       "updatedAt": "2016-06-19T09:28:25.000Z"
     },
     {
-      "id": 37,
-      "examitem_id": "46b2aac0-35f6-11e6-b78e-798bb45aa8e1",
+      "id": 42,
+      "examitem_id": "9cb989b0-361f-11e6-a2b5-d34754e75c61",
       "parent_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
       "parent_name": "绪论",
       "type": "0",
-      "content": "11",
-      "answer": "",
-      "analysis": "22",
-      "selects": "[{\"$$hashKey\":\"003\",\"answer\":true,\"question\":\"1\"},{\"$$hashKey\":\"01L\",\"answer\":false,\"question\":\"2\"},{\"$$hashKey\":\"01N\",\"answer\":true,\"question\":\"3\"}]",
-      "datems": "1466324254572",
-      "createdAt": "2016-06-19T08:17:34.000Z",
-      "updatedAt": "2016-06-19T08:17:34.000Z"
+      "content": "你毕业于哪个学校？",
+      "answer": "A,C",
+      "analysis": "根据自己的实际情况回答啊",
+      "selects": "[{\"$$hashKey\":\"003\",\"answer\":true,\"question\":\"东北大学\"},{\"$$hashKey\":\"01L\",\"answer\":false,\"question\":\"北京大学\"},{\"$$hashKey\":\"01N\",\"answer\":true,\"question\":\"南京大学\"}]",
+      "datems": "1466342008267",
+      "createdAt": "2016-06-19T13:13:28.000Z",
+      "updatedAt": "2016-06-19T13:13:28.000Z"
     }
-  ]
+  ],
+  "examitem": {
+    "id": 39,
+    "examitem_id": "c864c2e0-3602-11e6-a2b5-d34754e75c61",
+    "parent_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
+    "parent_name": "绪论",
+    "type": "1",
+    "content": "你有几只小狗？",
+    "answer": "三只，两只金毛，一只牧羊犬。",
+    "analysis": "根据自己的实际情况回答即可。",
+    "selects": "[{\"$$hashKey\":\"003\",\"answer\":false}]",
+    "datems": "1466329626126",
+    "createdAt": "2016-06-19T09:47:06.000Z",
+    "updatedAt": "2016-06-19T09:47:06.000Z"
+  }
 }
 ```
 
