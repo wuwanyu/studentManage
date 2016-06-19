@@ -761,52 +761,66 @@
 {
   "code": "200",
   "msg": "获取信息成功！",
-  "item": {  //试卷信息
-    "id": 11,
-    "exam_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
+  "item": {   //试卷信息
+    "id": 13,
+    "exam_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
     "major_id": "780d5120-bcfb-11e5-8cfe-770f2937a8b8",
     "major_name": "基础医学",
     "subject_id": "69265b10-bcfc-11e5-8cfe-770f2937a8b8",
     "subject_name": "药理学",
     "icon": null,
-    "name": "[药物代谢动力学]",
-    "brief": "药理学特色课程",
+    "name": "绪论",
+    "brief": "绪论",
     "level": null,
-    "datems": "1453014632009",
-    "createdAt": "2016-01-17T11:53:07.000Z",
-    "updatedAt": "2016-01-17T11:53:07.000Z",
+    "datems": "1453630457581",
+    "createdAt": "2016-01-24T15:38:45.000Z",
+    "updatedAt": "2016-02-29T11:44:17.000Z",
     "s_count": null,
     "d_count": null,
-    "p_count": 2
+    "p_count": null
   },
-  "examitemList": [   //试题列表
+  "examitemList": [  //试题列表
     {
-      "id": 23,
-      "examitem_id": "3278f630-bd11-11e5-8cfe-770f2937a8b8",
-      "parent_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
-      "parent_name": "[药物代谢动力学]",
-      "type": "0",  //试题类型，选择：0；填空：1；简答：2
-      "content": "某弱酸药物pka=3.4,在血浆中解离百分率约：",
-      "answer": "4",
-      "analysis": "17865200985: ，PH-PKa=7.4-3.4=4, 离子型/非离子型=10的4次方=10000 解离百分率=离子型/（离子型+非离子型）=10000/10001=99.99%",
-      "selects": "10%,90%,99%,99.9%,99.99%",  //选项
-      "datems": "1453014632009",
-      "createdAt": "2016-01-17T11:55:26.000Z",
-      "updatedAt": "2016-01-17T12:03:52.000Z"
+      "id": 39,
+      "examitem_id": "c864c2e0-3602-11e6-a2b5-d34754e75c61",
+      "parent_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
+      "parent_name": "绪论",
+      "type": "1",
+      "content": "你有几只小狗？",
+      "answer": "三只，两只金毛，一只牧羊犬。",
+      "analysis": "根据自己的实际情况回答即可。",
+      "selects": "[{\"$$hashKey\":\"003\",\"answer\":false}]",
+      "datems": "1466329626126",
+      "createdAt": "2016-06-19T09:47:06.000Z",
+      "updatedAt": "2016-06-19T09:47:06.000Z"
     },
     {
-      "id": 24,
-      "examitem_id": "8c0c5e70-bd12-11e5-8cfe-770f2937a8b8",
-      "parent_id": "df8a5720-bd10-11e5-8cfe-770f2937a8b8",
-      "parent_name": "[药物代谢动力学]",
+      "id": 38,
+      "examitem_id": "2c26f7b0-3600-11e6-a2b5-d34754e75c61",
+      "parent_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
+      "parent_name": "绪论",
       "type": "0",
-      "content": "阿司匹林的pKa是3.5,它在pH为7.5肠液中可吸收约：",
-      "answer": "$index",
-      "analysis": "Jyphh: 详解：对于弱酸性药物而言，离子型/非离子型=10的（PH-PKa）次方 血浆的PH为7.4，PH-PKa=7.4-3.4=4, 离子型/非离子型=10的4次方=10000 解离百分率=离子型/（离子型+非离子型）=10000/10001=99.99%",
-      "selects": "1%,0.1%,0.01%,10%,99%",
-      "datems": "1453014632009",
-      "createdAt": "2016-01-17T12:05:06.000Z",
-      "updatedAt": "2016-01-17T12:05:06.000Z"
+      "content": "你有几只狗？",
+      "answer": "",
+      "analysis": "根据自己的实际情况回答",
+      "selects": "[{\"$$hashKey\":\"003\",\"answer\":false,\"question\":\"1\"},{\"$$hashKey\":\"01L\",\"answer\":true,\"question\":\"2\"},{\"$$hashKey\":\"01N\",\"answer\":false,\"question\":\"3\"}]",
+      "datems": "1466328505004",
+      "createdAt": "2016-06-19T09:28:25.000Z",
+      "updatedAt": "2016-06-19T09:28:25.000Z"
+    },
+    {
+      "id": 37,
+      "examitem_id": "46b2aac0-35f6-11e6-b78e-798bb45aa8e1",
+      "parent_id": "8dc79c90-c2b0-11e5-8a20-8f644d73d409",
+      "parent_name": "绪论",
+      "type": "0",
+      "content": "11",
+      "answer": "",
+      "analysis": "22",
+      "selects": "[{\"$$hashKey\":\"003\",\"answer\":true,\"question\":\"1\"},{\"$$hashKey\":\"01L\",\"answer\":false,\"question\":\"2\"},{\"$$hashKey\":\"01N\",\"answer\":true,\"question\":\"3\"}]",
+      "datems": "1466324254572",
+      "createdAt": "2016-06-19T08:17:34.000Z",
+      "updatedAt": "2016-06-19T08:17:34.000Z"
     }
   ]
 }
