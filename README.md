@@ -1,189 +1,160 @@
- 开源项目 代码片段 企业版 特惠 我的码云
- 
-搜索...
-   wuwanyu
- Unwatch 2   Fork 0
- wuwanyu / studentJavaScript
- 代码  Issues 0  Pull Requests 0  附件 0  Wiki 0  统计  服务    管理
-医学生 -- 编辑
- 3 Commits
- 1 Branches
- 0 Tags
- 0 Releases
- 1 Contributors
-克隆/下载 master   student /  README.md
-一键复制编辑原始数据按行查看历史
- README.md 95.00 KB →  wuwanyu wuwanyu 提交于 2017-07-31 14:01 . first commit
 <<<<<<< HEAD
-
 studentManage接口文档
-项目介绍
-第1章 h5界面
-1.1 课程相关
-1.1.1 视频详情及评论列表页
-1.1.2 第三方视频源播放页
-1.2 笔记相关
-1.2.1 笔记详情及评论列表页
-1.3 新闻相关
-1.3.1 新闻详情及评论列表页
-1.4 社区相关
-1.4.1 帖子详情及评论列表页 *
-第1章 接口设计
-11 课程相关
-1.1.1 获取课程专业列表
-1.1.2 获取课程列表
-1.1.3 获取课程列表，分页，评论量，点赞量，模糊查询
-1.1.4 获取课程详情，及章节列表
-1.1.4 获取视频详情，课程评价
-1.1.5 收藏课程
-1.1.6 点赞课程
-1.1.7 评价课程
-1.2 题库相关
-1.2.1 获取试卷专业列表
-1.2.2 获取试卷科目列表
-1.2.3 获取试卷列表
-1.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询
-1.2.5 获取试卷详情，及试题列表
-1.2.6 收藏试卷
-1.2.7 点赞试卷
-1.2.8 评价试卷
-1.2.8 收藏试题
-2.2.9 获取我收藏试题的试卷列表
-2.2.10 根据试卷id，获取我收藏试题的列表
-2.3 笔记相关
-2.3.1 获取笔记专业列表
-2.3.2 获取笔记科目列表
-2.3.3 获取笔记列表
-2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询
-2.3.5 获取笔记详情，及评价列表
-2.3.6 收藏笔记
-2.3.7 点赞笔记
-2.3.8 评价笔记
-2.4 资源相关
-2.4.1 获取资源专业列表
-2.4.2 获取资源科目列表
-2.4.3 获取资源列表
-2.4.4 获取资源列表，含收藏量，评论量，分页
-2.4.5 获取资源详情
-2.4.6 收藏资源
-2.4.7 点赞资源
-2.4.8 评论资源
-2.5 新闻相关
-2.5.1 获取新闻标签列表
-2.5.2 获取新闻列表
-2.5.3 获取新闻详情，及评价列表
-2.5.4 添加订阅
-2.5.5 收藏新闻
-2.5.6 点赞新闻
-2.5.7 评价新闻
-2.6 社区相关
-2.6.1 获取社区列表
-2.6.2 获取社区详情，及帖子列表
-2.6.3 获取帖子列表
-2.6.4 获取帖子详情，及评论列表
-2.6.5 发帖
-2.6.6 关注社区
-2.6.7 获取精选帖列表
-2.6.8 根据社区id，获取置顶贴列表
-2.6.9 点赞帖子
-2.6.10 评论帖子
-2.7 用户相关
-2.7.1 获取我收藏的课程
-2.7.2 获取我收藏的试卷
-2.7.3 获取我收藏的笔记
-2.7.4 获取我收藏的新闻
-2.7.5 获取我的错题
-2.7.6 获取我关注的社区
-2.7.7 获取我关注的新闻标签
-2.7.8 用户登录
-2.7.9 用户注册
-2.7.10 查看某人主页
+---------------------------
 
-项目介绍
-
-ip地址：120.25.124.68
-
-接口访问地址：http://120.25.124.68:4000/studentManage/api/type/findListByType?type=course_major
+* [项目介绍](#项目介绍)
+* [第1章  h5界面](#h5界面)
+ *  [1.1 课程相关](#课程相关)
+	  * [1.1.1 视频详情及评论列表页](#获取课程专业列表)
+	  * [1.1.2 第三方视频源播放页](#第三方视频源播放页)
+	*  [1.2 笔记相关](#课程相关)
+	  * [1.2.1 笔记详情及评论列表页](#笔记详情及评论列表页)
+	*  [1.3 新闻相关](#课程相关)
+	  * [1.3.1 新闻详情及评论列表页](# 新闻详情及评论列表页)
+  *  [1.4 社区相关](#课程相关)
+	  * [1.4.1 帖子详情及评论列表页](#帖子详情及评论列表页)
+	  *
+* [第1章 接口设计](#接口设计)
+  *  [11 课程相关](#课程相关)
+	  * [1.1.1 获取课程专业列表](#获取课程专业列表)
+	  * [1.1.2 获取课程列表](#获取课程列表)
+	  * [1.1.3 获取课程列表，分页，评论量，点赞量，模糊查询](#获取课程列表1)
+	  * [1.1.4 获取课程详情，及章节列表](#获取课程详情)
+	  * [1.1.4 获取视频详情，课程评价](#获取视频详情)
+	  * [1.1.5 收藏课程](#收藏课程)
+	  * [1.1.6 点赞课程](#点赞课程)
+	  * [1.1.7 评价课程](#评价课程)
+ *  [1.2 题库相关](#题库相关)
+	  * [1.2.1 获取试卷专业列表](#获取试卷专业列表)
+	  * [1.2.2 获取试卷科目列表](#获取试卷科目列表)
+	  * [1.2.3 获取试卷列表](#获取试卷列表)
+	  * [1.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询](#获取试卷列表1)
+	  * [1.2.5 获取试卷详情，及试题列表](#获取试卷详情)
+	  * [1.2.6 收藏试卷](#收藏试卷)
+	  * [1.2.7 点赞试卷](#点赞试卷)
+	  * [1.2.8 评价试卷](#评价试卷)
+	  * [1.2.8 收藏试题](#收藏试题)
+	  * [2.2.9 获取我收藏试题的试卷列表](#获取我收藏试题的试卷列表)
+	  * [2.2.10 根据试卷id，获取我收藏试题的列表](#根据试卷id，获取我收藏试题的列表)
+ *  [2.3 笔记相关](#笔记相关)
+	  *  [2.3.1 获取笔记专业列表](#获取笔记专业列表)
+	  * [2.3.2 获取笔记科目列表](#获取笔记科目列表)
+	  * [2.3.3 获取笔记列表](#获取笔记列表)
+	  * [2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询](#获取笔记列表1)
+	  * [2.3.5 获取笔记详情，及评价列表](#获取笔记详情)
+	  * [2.3.6 收藏笔记](#收藏笔记)
+	  * [2.3.7 点赞笔记](#点赞笔记)
+	  * [2.3.8 评价笔记](#评价笔记)
+  *  [2.4 资源相关](#资源相关)
+	  *  [2.4.1 获取资源专业列表](#获取资源专业列表)
+	  * [2.4.2 获取资源科目列表](#获取资源科目列表)
+	  * [2.4.3 获取资源列表](#获取资源列表)
+	  * [2.4.4 获取资源列表，含收藏量，评论量，分页](#获取资源列表1)
+	  * [2.4.5 获取资源详情](#获取资源详情)
+	  * [2.4.6 收藏资源](#收藏资源)
+	  * [2.4.7 点赞资源](#点赞资源)
+	  * [2.4.8 评论资源](#评论资源)
+  *  [2.5 新闻相关](#新闻相关)
+	  * [2.5.1 获取新闻标签列表](#获取新闻标签列表)
+	  * [2.5.2 获取新闻列表](#获取新闻列表)
+	  * [2.5.3 获取新闻详情，及评价列表](#获取新闻详情)
+	  * [2.5.4 添加订阅](#添加订阅)
+	  * [2.5.5 收藏新闻](#收藏新闻)
+	  * [2.5.6 点赞新闻](#点赞新闻)
+	  * [2.5.7 评价新闻](#评价新闻)
+  *  [2.6 社区相关](#社区相关)
+	  * [2.6.1 获取社区列表](#获取社区列表)
+	  *  [2.6.2 获取社区详情，及帖子列表](#获取社区详情)
+	  * [2.6.3 获取帖子列表](#获取帖子列表)
+	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
+	  * [2.6.5 发帖](#发帖)
+	  * [2.6.6 关注社区](#关注社区)
+	  * [2.6.7 获取精选帖列表](#获取精选帖列表)
+	  * [2.6.8 根据社区id，获取置顶贴列表](# 根据社区id，获取置顶贴列表)
+	  * [2.6.9 点赞帖子](#点赞帖子)
+	  * [2.6.10 评论帖子](#评论帖子)
+ *  [2.7 用户相关](#用户相关)
+	  * [2.7.1 获取我收藏的课程](#获取我收藏的课程)
+	  * [2.7.2 获取我收藏的试卷](#获取我收藏的试卷)
+	  * [2.7.3 获取我收藏的笔记](#获取我收藏的笔记)
+	  * [2.7.4 获取我收藏的新闻](#获取我收藏的新闻)
+	  * [2.7.5 获取我的错题](#获取我的错题)
+	  * [2.7.6 获取我关注的社区](#获取我关注的社区)
+	  * [2.7.7 获取我关注的新闻标签](#获取我关注的新闻标签)
+	  * [2.7.8 用户登录](#用户登录)
+	  * [2.7.9 用户注册](#用户注册)
+      * [2.7.10 查看某人主页](#查看某人主页)
 
 
-H5界面
-
-1.1 课程相关
-
-
-1.1.1 视频详情及评论列表页
-
-路径：/studentManage/mobile/course
-
-方法：get
-
-参数：
-
-courseitem_id : 课程章节id
-请求实例：http://localhost:4000/studentManage/mobile/course?courseitem_id=5f3850f0-bd14-11e5-ace2-11edb9ad68d4
+<a name="项目介绍"></a>
+### 项目介绍
+##### ip地址：120.25.124.68
+##### 接口访问地址：http://120.25.124.68:4000/studentManage/api/type/findListByType?type=course_major
 
 
-1.2 笔记相关
+
+<a name="接口设计"></a>
+## H5界面
+<a name="课程相关"></a>
+### 1.1 课程相关
+  <a name="视频详情及评论列表页"></a>
+#### 1.1.1 视频详情及评论列表页
+##### 路径：/studentManage/mobile/course
+##### 方法：get
+##### 参数：
+- courseitem_id : 课程章节id
+
+##### 请求实例：http://localhost:4000/studentManage/mobile/course?courseitem_id=5f3850f0-bd14-11e5-ace2-11edb9ad68d4
 
 
-1.2.1 笔记详情及评论列表页
+<a name="笔记相关"></a>
+### 1.2 笔记相关
+  <a name="笔记详情及评论列表页"></a>
+#### 1.2.1 笔记详情及评论列表页
+##### 路径：/studentManage/mobile/note
+##### 方法：get
+##### 参数：
+- note_id: 笔记id
 
-路径：/studentManage/mobile/note
+##### 请求实例：http://localhost:4000/studentManage/mobile/note?note_id=ca5fbf90-e13f-11e5-8e43-8bea282120fc
 
-方法：get
+<a name="笔记相关"></a>
+### 1.3 新闻相关
+  <a name="新闻详情及评论列表页"></a>
+#### 1.3.1 新闻详情及评论列表页
+##### 路径：/studentManage/mobile/news
+##### 方法：get
+##### 参数：
+- news_id: 新闻id
 
-参数：
-
-note_id: 笔记id
-请求实例：http://localhost:4000/studentManage/mobile/note?note_id=ca5fbf90-e13f-11e5-8e43-8bea282120fc
-
-
-1.3 新闻相关
-
-
-1.3.1 新闻详情及评论列表页
-
-路径：/studentManage/mobile/news
-
-方法：get
-
-参数：
-
-news_id: 新闻id
-请求实例：http://localhost:4000/studentManage/mobile/news?news_id=c9d53d70-3d42-11e6-ab7b-4b13ffcc5cad
+##### 请求实例：http://localhost:4000/studentManage/mobile/news?news_id=c9d53d70-3d42-11e6-ab7b-4b13ffcc5cad
 
 
-1.4 社区相关
+<a name="社区相关"></a>
+### 1.4 社区相关
+  <a name="笔记详情及评论列表页"></a>
+#### 1.4.1 帖子详情及评论列表页
+##### 路径：/studentManage/mobile/post
+##### 方法：get
+##### 参数：
+- post_id: 帖子id
 
+##### 请求实例：http://localhost:4000/studentManage/mobile/post?post_id=d8d4d140-b2ec-11e5-a306-33448f6b146a#left-link
 
-1.4.1 帖子详情及评论列表页
+<a name="接口设计"></a>
+## 接口设计
+<a name="课程相关"></a>
+### 2.1 课程相关
+  <a name="获取课程专业列表"></a>
+#### 2.1.1 获取课程专业列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=course_major
 
-路径：/studentManage/mobile/post
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=course_major
 
-方法：get
-
-参数：
-
-post_id: 帖子id
-请求实例：http://localhost:4000/studentManage/mobile/post?post_id=d8d4d140-b2ec-11e5-a306-33448f6b146a#left-link
-
-
-接口设计
-
-2.1 课程相关
-
-
-2.1.1 获取课程专业列表
-
-接口地址：/studentManage/api/type/findListByType
-
-方法：get
-
-参数：
-
-type=course_major
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=course_major
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -234,18 +205,17 @@ type=course_major
     }
   ]
 }
+```
+  <a name="获取课程列表"></a>
+#### 2.1.2 获取课程列表
+##### 接口地址：/studentManage/api/course/getAll
+##### 方法：get
+##### 参数：
+- keyword：关键字
 
-2.1.2 获取课程列表
+##### 请求实例：http://localhost:4000/studentManage/api/course/getAll
 
-接口地址：/studentManage/api/course/getAll
-
-方法：get
-
-参数：
-
-keyword：关键字
-请求实例：http://localhost:4000/studentManage/api/course/getAll
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -277,21 +247,20 @@ keyword：关键字
   ],
   "count": 2
 }
+```
+  <a name="获取课程列表1"></a>
+#### 2.1.3 获取课程列表，分页，评论量，点赞量，模糊查询
+##### 接口地址：/studentManage/api/course/list
+##### 方法：get
+##### 参数：
+- major_id：专业id；
+- keyword：关键字；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 
-2.1.3 获取课程列表，分页，评论量，点赞量，模糊查询
+##### 请求实例：http://localhost:4000/studentManage/api/course/list?major_id=2d92b270-bcfb-11e5-8cfe-770f2937a8b8
 
-接口地址：/studentManage/api/course/list
-
-方法：get
-
-参数：
-
-major_id：专业id；
-keyword：关键字；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
-请求实例：http://localhost:4000/studentManage/api/course/list?major_id=2d92b270-bcfb-11e5-8cfe-770f2937a8b8
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -329,18 +298,17 @@ limit：每页条数（默认为10）
     }
   ]
 }
+```
+  <a name="获取课程详情"></a>
+#### 2.1.4 获取课程详情，及章节列表
+##### 接口地址：/studentManage/api/course/getOne
+##### 方法：get
+##### 参数：
+- courseid：课程id
 
-2.1.4 获取课程详情，及章节列表
+##### 请求实例：http://localhost:4000/studentManage/api/course/getOne?course_id=85ad17d0-bd13-11e5-9a2d-27445d93409c
 
-接口地址：/studentManage/api/course/getOne
-
-方法：get
-
-参数：
-
-courseid：课程id
-请求实例：http://localhost:4000/studentManage/api/course/getOne?course_id=85ad17d0-bd13-11e5-9a2d-27445d93409c
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -398,18 +366,21 @@ courseid：课程id
     }
   ]
 }
+```
 
-2.1.4 获取视频详情，课程评价
 
-接口地址：/studentManage/api/courseitem/getOne
 
-方法：get
 
-参数：
+  <a name="获取视频详情"></a>
+#### 2.1.4 获取视频详情，课程评价
+##### 接口地址：/studentManage/api/courseitem/getOne
+##### 方法：get
+##### 参数：
+- courseid：课程id
 
-courseid：课程id
-请求实例：http://localhost:4000/studentManage/api/courseitem/getOne?courseitem_id=5f3850f0-bd14-11e5-ace2-11edb9ad68d4
+##### 请求实例：http://localhost:4000/studentManage/api/courseitem/getOne?courseitem_id=5f3850f0-bd14-11e5-ace2-11edb9ad68d4
 
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -446,19 +417,19 @@ courseid：课程id
     }
   ]
 }
+```
 
-2.1.5 收藏课程
+  <a name="收藏课程"></a>
+#### 2.1.5 收藏课程
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 课程id
+- user_id: 用户id
+- type = course
+- operation = s
 
-接口地址：/studentManage/api/obj_operation/add
-
-方法：post
-
-参数：
-
-obj_id: 课程id
-user_id: 用户id
-type = course
-operation = s
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -472,19 +443,19 @@ operation = s
     "id": 40
   }
 }
+```
 
-1.1.6 点赞课程
+  <a name="点赞课程"></a>
+#### 1.1.6 点赞课程
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 课程id
+- user_id: 用户id
+- type = course
+- operation = d
 
-接口地址：/studentManage/api/obj_operation/add
-
-方法：post
-
-参数：
-
-obj_id: 课程id
-user_id: 用户id
-type = course
-operation = d
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -498,19 +469,21 @@ operation = d
     "id": 40
   }
 }
+```
 
-1.1.7 评价课程
 
-接口地址：/studentManage/api/comment/add
 
-方法：post
+  <a name="评价课程"></a>
+#### 1.1.7 评价课程
+##### 接口地址：/studentManage/api/comment/add
+##### 方法：post
+##### 参数：
+- parent_id:课程id
+- parent_type:course
+- user_id:评论人id
+- content:评论内容
 
-参数：
-
-parent_id:课程id
-parent_type:course
-user_id:评论人id
-content:评论内容
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -526,21 +499,20 @@ content:评论内容
     "id": 3
   }
 }
+```
 
-2.2 题库相关
+<a name="题库相关"></a>
+### 2.2 题库相关
+  <a name="获取试卷专业列表"></a>
+#### 2.2.1 获取试卷专业列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=exam_major
 
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=exam_major
 
-2.2.1 获取试卷专业列表
-
-接口地址：/studentManage/api/type/findListByType
-
-方法：get
-
-参数：
-
-type=exam_major
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=exam_major
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -591,18 +563,17 @@ type=exam_major
     }
   ]
 }
+```
+  <a name="获取试卷科目列表"></a>
+#### 2.2.2 获取试卷科目列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=exam_subject
 
-2.2.2 获取试卷科目列表
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=exam_subject
 
-接口地址：/studentManage/api/type/findListByType
-
-方法：get
-
-参数：
-
-type=exam_subject
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=exam_subject
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -631,18 +602,17 @@ type=exam_subject
     }
   ]
 }
+```
+  <a name="获取试卷列表"></a>
+#### 2.2.3 获取试卷列表
+##### 接口地址：/studentManage/api/exam/findAll
+##### 方法：get
+##### 参数：
+- keyword：关键字
 
-2.2.3 获取试卷列表
+##### 请求实例：http://localhost:4000/studentManage/api/exam/findAll
 
-接口地址：/studentManage/api/exam/findAll
-
-方法：get
-
-参数：
-
-keyword：关键字
-请求实例：http://localhost:4000/studentManage/api/exam/findAll
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -686,21 +656,20 @@ keyword：关键字
     }
   ]
 }
+```
+  <a name="获取试卷列表1"></a>
+#### 2.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询
+##### 接口地址：/studentManage/api/exam/list
+##### 方法：get
+##### 参数：
+- subject_id：科目id；
+- keyword：关键字；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 
-2.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询
+##### 请求实例：http://localhost:4000/studentManage/api/exam/list?subject_id=69265b10-bcfc-11e5-8cfe-770f2937a8b8
 
-接口地址：/studentManage/api/exam/list
-
-方法：get
-
-参数：
-
-subject_id：科目id；
-keyword：关键字；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
-请求实例：http://localhost:4000/studentManage/api/exam/list?subject_id=69265b10-bcfc-11e5-8cfe-770f2937a8b8
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -744,18 +713,17 @@ limit：每页条数（默认为10）
     }
   ]
 }
+```
+  <a name="获取试卷详情"></a>
+#### 2.2.5 获取试卷详情，及试题列表
+##### 接口地址：/studentManage/api/exam/getOne
+##### 方法：get
+##### 参数：
+- exam_id：试卷id
 
-2.2.5 获取试卷详情，及试题列表
+##### 请求实例：http://localhost:4000/studentManage/api/exam/getOne?exam_id=df8a5720-bd10-11e5-8cfe-770f2937a8b8
 
-接口地址：/studentManage/api/exam/getOne
-
-方法：get
-
-参数：
-
-exam_id：试卷id
-请求实例：http://localhost:4000/studentManage/api/exam/getOne?exam_id=df8a5720-bd10-11e5-8cfe-770f2937a8b8
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -850,19 +818,22 @@ exam_id：试卷id
     "updatedAt": "2016-06-19T09:47:06.000Z"
   }
 }
+```
 
-2.2.6 收藏试卷
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
+  <a name="收藏试卷"></a>
+#### 2.2.6 收藏试卷
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 试卷id
+- user_id: 用户id
+- type = exam
+- operation = s
 
-参数：
 
-obj_id: 试卷id
-user_id: 用户id
-type = exam
-operation = s
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -876,19 +847,20 @@ operation = s
     "id": 40
   }
 }
+```
 
-2.2.7 点赞试卷
+ <a name="点赞试卷"></a>
+#### 2.2.7 点赞试卷
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 试卷id
+- user_id: 用户id
+- type = exam
+- operation = d
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
-
-参数：
-
-obj_id: 试卷id
-user_id: 用户id
-type = exam
-operation = d
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -902,19 +874,20 @@ operation = d
     "id": 40
   }
 }
+```
 
-1.2.8 评价试卷
 
-接口地址：/studentManage/api/comment/add
+  <a name="评价试卷"></a>
+#### 1.2.8 评价试卷
+##### 接口地址：/studentManage/api/comment/add
+##### 方法：post
+##### 参数：
+- parent_id:试卷id
+- parent_type:exam
+- user_id:评论人id
+- content:评论内容
 
-方法：post
-
-参数：
-
-parent_id:试卷id
-parent_type:exam
-user_id:评论人id
-content:评论内容
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -930,20 +903,21 @@ content:评论内容
     "id": 4
   }
 }
+```
 
-2.2.8 收藏试题
+ <a name="收藏试题"></a>
+#### 2.2.8 收藏试题
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 试题id
+- exam_id: 试卷id
+- user_id: 用户id
+- type = collect_examitem
+- operation = s
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
-
-参数：
-
-obj_id: 试题id
-exam_id: 试卷id
-user_id: 用户id
-type = collect_examitem
-operation = s
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -958,19 +932,22 @@ operation = s
     "id": 40
   }
 }
+```
 
-2.2.9 获取我收藏试题的试卷列表
 
-接口地址：/studentManage/api/obj_operation/getCollectExamByUserId
 
-方法：get
 
-参数：
+ <a name="获取我收藏试题的试卷列表"></a>
+#### 2.2.9 获取我收藏试题的试卷列表
+##### 接口地址：/studentManage/api/obj_operation/getCollectExamByUserId
+##### 方法：get
+##### 参数：
+- user_id: 用户id
+- type = collect_examitem
 
-user_id: 用户id
-type = collect_examitem
-实例：http://localhost:4000/studentManage/api/obj_operation/getCollectExamByUserId?type=collect_examitem&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5
+##### 实例：http://localhost:4000/studentManage/api/obj_operation/getCollectExamByUserId?type=collect_examitem&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5
 
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1007,20 +984,20 @@ type = collect_examitem
     }
   ]
 }
+```
 
-2.2.10 根据试卷id，获取我收藏试题的列表
+ <a name="根据试卷id，获取我收藏试题的列表"></a>
+#### 2.2.10 根据试卷id，获取我收藏试题的列表
+##### 接口地址：/studentManage/api/obj_operation/getCollectExamitemListByExamId
+##### 方法：get
+##### 参数：
+- user_id: 用户id
+- type = collect_examitem
+- exam_id:试卷id
 
-接口地址：/studentManage/api/obj_operation/getCollectExamitemListByExamId
+##### 实例：http://localhost:4000/studentManage/api/obj_operation/getCollectExamitemListByExamId?type=collect_examitem&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&exam_id=ba8201d0-c733-11e5-aefe-9bbbaef0bed1
 
-方法：get
-
-参数：
-
-user_id: 用户id
-type = collect_examitem
-exam_id:试卷id
-实例：http://localhost:4000/studentManage/api/obj_operation/getCollectExamitemListByExamId?type=collect_examitem&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&exam_id=ba8201d0-c733-11e5-aefe-9bbbaef0bed1
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1069,21 +1046,22 @@ exam_id:试卷id
     }
   ]
 }
+```
 
-2.3 笔记相关
 
 
-2.3.1 获取笔记专业列表
+<a name="笔记相关"></a>
+### 2.3 笔记相关
+  <a name="获取笔记专业列表"></a>
+#### 2.3.1 获取笔记专业列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=note_major
 
-接口地址：/studentManage/api/type/findListByType
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=note_major
 
-方法：get
-
-参数：
-
-type=note_major
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=note_major
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1112,18 +1090,17 @@ type=note_major
     }
   ]
 }
+```
+<a name="获取笔记科目列表"></a>
+#### 2.3.2 获取笔记科目列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=note_subject
 
-2.3.2 获取笔记科目列表
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=note_subject
 
-接口地址：/studentManage/api/type/findListByType
-
-方法：get
-
-参数：
-
-type=note_subject
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=note_subject
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1152,18 +1129,17 @@ type=note_subject
     }
   ]
 }
+```
+<a name="获取笔记列表"></a>
+#### 2.3.3 获取笔记列表
+##### 接口地址：/studentManage/api/note/getAll
+##### 方法：get
+##### 参数：
+- keyword：关键字
 
-2.3.3 获取笔记列表
+##### 请求实例：http://localhost:4000/studentManage/api/note/getAll
 
-接口地址：/studentManage/api/note/getAll
-
-方法：get
-
-参数：
-
-keyword：关键字
-请求实例：http://localhost:4000/studentManage/api/note/getAll
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1212,21 +1188,20 @@ keyword：关键字
     }
   ]
 }
+```
+<a name="获取笔记列表1"></a>
+#### 2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询
+##### 接口地址：/studentManage/api/note/list
+##### 方法：get
+##### 参数：
+- keyword：关键字；
+- subject_id：科目id；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 
-2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询
+##### 请求实例：http://localhost:4000/studentManage/api/note/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
-接口地址：/studentManage/api/note/list
-
-方法：get
-
-参数：
-
-keyword：关键字；
-subject_id：科目id；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
-请求实例：http://localhost:4000/studentManage/api/note/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1268,18 +1243,17 @@ limit：每页条数（默认为10）
     }
   ]
 }
+```
+<a name="获取笔记详情"></a>
+#### 2.3.5 获取笔记详情，及评价列表
+##### 接口地址：/studentManage/api/note/getOne
+##### 方法：get
+##### 参数：
+- note_id：笔记id
 
-2.3.5 获取笔记详情，及评价列表
+##### 请求实例：http://localhost:4000/studentManage/api/note/getOne?note_id=ca5fbf90-e13f-11e5-8e43-8bea282120fc
 
-接口地址：/studentManage/api/note/getOne
-
-方法：get
-
-参数：
-
-note_id：笔记id
-请求实例：http://localhost:4000/studentManage/api/note/getOne?note_id=ca5fbf90-e13f-11e5-8e43-8bea282120fc
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -1301,19 +1275,21 @@ note_id：笔记id
     "p_count": 1
   }
 }
+```
 
-2.3.6 收藏笔记
 
-接口地址：/studentManage/api/obj_operation/add
+<a name="收藏笔记"></a>
+#### 2.3.6 收藏笔记
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 笔记id
+- user_id: 用户id
+- type = note
+- operation = s
 
-方法：post
 
-参数：
-
-obj_id: 笔记id
-user_id: 用户id
-type = note
-operation = s
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1327,19 +1303,20 @@ operation = s
     "id": 40
   }
 }
+```
 
-2.3.7 点赞笔记
 
-接口地址：/studentManage/api/obj_operation/add
+<a name="点赞笔记"></a>
+#### 2.3.7 点赞笔记
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 笔记id
+- user_id: 用户id
+- type = note
+- operation = d
 
-方法：post
-
-参数：
-
-obj_id: 笔记id
-user_id: 用户id
-type = note
-operation = d
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1353,19 +1330,21 @@ operation = d
     "id": 40
   }
 }
+```
 
-2.3.8 评价笔记
 
-接口地址：/studentManage/api/comment/add
 
-方法：post
+  <a name="评价笔记"></a>
+#### 2.3.8 评价笔记
+##### 接口地址：/studentManage/api/comment/add
+##### 方法：post
+##### 参数：
+- parent_id: 笔记id
+- parent_type:note
+- user_id:评论人id
+- content:评论内容
 
-参数：
-
-parent_id: 笔记id
-parent_type:note
-user_id:评论人id
-content:评论内容
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1381,21 +1360,22 @@ content:评论内容
     "id": 5
   }
 }
+```
 
-2.4 资源相关
 
 
-2.4.1 获取资源专业列表
+<a name="资源相关"></a>
+### 2.4 资源相关
+<a name="获取资源专业列表"></a>
+#### 2.4.1 获取资源专业列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=resource_major
 
-接口地址：/studentManage/api/type/findListByType
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_major
 
-方法：get
-
-参数：
-
-type=resource_major
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_major
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1413,18 +1393,18 @@ type=resource_major
     }
   ]
 }
+```
 
-3.13 获取资源科目列表
+<a name="获取资源科目列表"></a>
+#### 3.13 获取资源科目列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=resource_subject
 
-接口地址：/studentManage/api/type/findListByType
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_subject
 
-方法：get
-
-参数：
-
-type=resource_subject
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_subject
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1453,18 +1433,17 @@ type=resource_subject
     }
   ]
 }
+```
+<a name="获取资源科目列表"></a>
+#### 2.4.2 获取资源科目列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=resource_subject
 
-2.4.2 获取资源科目列表
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_subject
 
-接口地址：/studentManage/api/type/findListByType
-
-方法：get
-
-参数：
-
-type=resource_subject
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=resource_subject
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1493,18 +1472,17 @@ type=resource_subject
     }
   ]
 }
+```
+<a name="获取资源列表"></a>
+#### 2.4.3 获取资源列表
+##### 接口地址：/studentManage/api/resource/getAll
+##### 方法：get
+##### 参数：
+- keyword：关键字
 
-2.4.3 获取资源列表
+##### 请求实例：http://localhost:4000/studentManage/api/resource/getAll
 
-接口地址：/studentManage/api/resource/getAll
-
-方法：get
-
-参数：
-
-keyword：关键字
-请求实例：http://localhost:4000/studentManage/api/resource/getAll
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1571,21 +1549,20 @@ keyword：关键字
     }
   ]
 }
+```
+<a name="获取资源列表1"></a>
+#### 2.4.4 获取资源列表，含收藏量，评论量，分页
+##### 接口地址：/studentManage/api/resource/list
+##### 方法：get
+##### 参数：
+- keyword：关键字；
+- subject_id：科目id；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 
-2.4.4 获取资源列表，含收藏量，评论量，分页
+##### 请求实例：http://localhost:4000/studentManage/api/resource/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
 
-接口地址：/studentManage/api/resource/list
-
-方法：get
-
-参数：
-
-keyword：关键字；
-subject_id：科目id；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
-请求实例：http://localhost:4000/studentManage/api/resource/list?subject_id=9039a280-a71b-11e5-b779-99d7f151235d
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1630,18 +1607,17 @@ limit：每页条数（默认为10）
   ]
 }
 
+```
+<a name="获取资源详情"></a>
+#### 2.4.5 获取资源详情
+##### 接口地址：/studentManage/api/resource/getOne
+##### 方法：get
+##### 参数：
+- resource_id：资源ID
 
-2.4.5 获取资源详情
+##### 请求实例：http://localhost:4000/studentManage/api/resource/getOne?resource_id=adf71a40-bd1a-11e5-9482-4d7e67b0bbbc
 
-接口地址：/studentManage/api/resource/getOne
-
-方法：get
-
-参数：
-
-resource_id：资源ID
-请求实例：http://localhost:4000/studentManage/api/resource/getOne?resource_id=adf71a40-bd1a-11e5-9482-4d7e67b0bbbc
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -1665,19 +1641,23 @@ resource_id：资源ID
   }
 }
 
+```
 
-2.4.6 收藏资源
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
+<a name="收藏资源"></a>
+#### 2.4.6 收藏资源
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 资源id
+- user_id: 用户id
+- type = resource
+- operation=s
 
-参数：
 
-obj_id: 资源id
-user_id: 用户id
-type = resource
-operation=s
+
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1692,19 +1672,23 @@ operation=s
   }
 }
 
+```
 
-2.4.7 点赞资源
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
+<a name="点赞资源"></a>
+#### 2.4.7 点赞资源
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 资源id
+- user_id: 用户id
+- type = resource
+- operation = d
 
-参数：
 
-obj_id: 资源id
-user_id: 用户id
-type = resource
-operation = d
+
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1719,19 +1703,21 @@ operation = d
   }
 }
 
+```
 
-2.4.8 评论资源
 
-接口地址：/studentManage/api/comment/add
 
-方法：post
+  <a name="评论资源"></a>
+#### 2.4.8 评论资源
+##### 接口地址：/studentManage/api/comment/add
+##### 方法：post
+##### 参数：
+- parent_id:资源id
+- parent_type:resource
+- user_id:评论人id
+- content:评论内容
 
-参数：
-
-parent_id:资源id
-parent_type:resource
-user_id:评论人id
-content:评论内容
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1747,21 +1733,22 @@ content:评论内容
     "id": 6
   }
 }
+```
 
-2.5 新闻相关
 
 
-2.5.1 获取新闻标签列表
+<a name="新闻相关"></a>
+### 2.5 新闻相关
+<a name="获取新闻标签列表"></a>
+#### 2.5.1 获取新闻标签列表
+##### 接口地址：/studentManage/api/type/findListByType
+##### 方法：get
+##### 参数：
+- type=subscription
 
-接口地址：/studentManage/api/type/findListByType
+##### 请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=subscription
 
-方法：get
-
-参数：
-
-type=subscription
-请求实例：http://localhost:4000/studentManage/api/type/findListByType?type=subscription
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1845,20 +1832,19 @@ type=subscription
     }
   ]
 }
+```
+<a name="获取新闻列表"></a>
+#### 2.5.2 获取新闻列表
+##### 接口地址：/studentManage/api/news/list
+##### 方法：get
+##### 参数：
+- type_id：新闻类型id；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 
-2.5.2 获取新闻列表
+##### 请求实例：http://localhost:4000/studentManage/api/news/list?type_id=5811dda0-b2ec-11e5-a306-33448f6b146a
 
-接口地址：/studentManage/api/news/list
-
-方法：get
-
-参数：
-
-type_id：新闻类型id；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
-请求实例：http://localhost:4000/studentManage/api/news/list?type_id=5811dda0-b2ec-11e5-a306-33448f6b146a
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -1904,18 +1890,17 @@ limit：每页条数（默认为10）
     }
   ]
 }
+```
+<a name="获取新闻详情"></a>
+#### 2.5.3  获取新闻详情，及评价列表
+##### 接口地址：/studentManage/api/news/getOne
+##### 方法：get
+##### 参数：
+- news_id：新闻id
 
-2.5.3 获取新闻详情，及评价列表
+##### 请求实例：http://localhost:4000/studentManage/api/news/getOne?news_id=35087d60-a85a-11e5-aa1d-11c0314c8644
 
-接口地址：/studentManage/api/news/getOne
-
-方法：get
-
-参数：
-
-news_id：新闻id
-请求实例：http://localhost:4000/studentManage/api/news/getOne?news_id=35087d60-a85a-11e5-aa1d-11c0314c8644
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -1938,19 +1923,23 @@ news_id：新闻id
     "p_count": 1
   }
 }
+```
 
-2.5.4 添加订阅
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
 
-参数：
 
-obj_id：新闻标签id
-user_id：用户
-type=subscription
-operation=g
+<a name="添加订阅"></a>
+#### 2.5.4 添加订阅
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id：新闻标签id
+- user_id：用户
+- type=subscription
+- operation=g
+
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1964,19 +1953,22 @@ operation=g
     "id": 39
   }
 }
+```
 
-2.4.6 收藏新闻
 
-接口地址：/studentManage/api/obj_operation/add
+<a name="收藏新闻"></a>
+#### 2.4.6 收藏新闻
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 新闻id
+- user_id: 用户id
+- type = news
+- operation=s
 
-方法：post
 
-参数：
 
-obj_id: 新闻id
-user_id: 用户id
-type = news
-operation=s
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -1991,19 +1983,21 @@ operation=s
   }
 }
 
+```
 
-2.4.5 点赞新闻
+<a name="点赞新闻"></a>
+#### 2.4.5 点赞新闻
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 新闻id
+- user_id: 用户id
+- type = news
+- operation = d
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
 
-参数：
-
-obj_id: 新闻id
-user_id: 用户id
-type = news
-operation = d
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -2018,19 +2012,21 @@ operation = d
   }
 }
 
+```
 
-2.5.7 评价新闻
 
-接口地址：/studentManage/api/comment/add
 
-方法：post
+  <a name="评价新闻"></a>
+#### 2.5.7 评价新闻
+##### 接口地址：/studentManage/api/comment/add
+##### 方法：post
+##### 参数：
+- parent_id:新闻id
+- parent_type:news
+- user_id:评论人id
+- content:评论内容
 
-参数：
-
-parent_id:新闻id
-parent_type:news
-user_id:评论人id
-content:评论内容
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -2046,21 +2042,20 @@ content:评论内容
     "id": 8
   }
 }
+```
 
-2.6 社区相关
+<a name="社区相关"></a>
+### 2.6 社区相关
+<a name="获取社区列表"></a>
+#### 2.6.1 获取社区列表
+##### 接口地址：/studentManage/api/community/list
+##### 方法：get
+##### 参数：
+- keyword：关键字
 
+##### 请求实例：http://localhost:4000/studentManage/api/community/list
 
-2.6.1 获取社区列表
-
-接口地址：/studentManage/api/community/list
-
-方法：get
-
-参数：
-
-keyword：关键字
-请求实例：http://localhost:4000/studentManage/api/community/list
-
+```
 {
   "count": 2,
   "list": [
@@ -2088,19 +2083,18 @@ keyword：关键字
     }
   ]
 }
+```
+<a name="获取社区详情"></a>
+#### 2.6.2 获取社区详情，及帖子列表
+##### 接口地址：/studentManage/api/community/getOne
+##### 方法：get
+##### 参数：
+- community_id：社区id
+- user_id：用户id(可选)
 
-2.6.2 获取社区详情，及帖子列表
+##### 请求实例：http://localhost:4000/studentManage/api/community/getOne?community_id=95e8d500-bcfd-11e5-8cfe-770f2937a8b8&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5
 
-接口地址：/studentManage/api/community/getOne
-
-方法：get
-
-参数：
-
-community_id：社区id
-user_id：用户id(可选)
-请求实例：http://localhost:4000/studentManage/api/community/getOne?community_id=95e8d500-bcfd-11e5-8cfe-770f2937a8b8&user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -2139,21 +2133,20 @@ user_id：用户id(可选)
     }
   ]
 }
+```
+<a name="获取帖子列表"></a>
+#### 2.6.3 获取帖子列表
+##### 接口地址：/studentManage/api/post/list
+##### 方法：get
+##### 参数：
+- community_id：社区id；
+- keyword：关键字；
+- page：页码（默认为1）；
+- limit：每页条数（默认为10）
 
-2.6.3 获取帖子列表
+##### 请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
-接口地址：/studentManage/api/post/list
-
-方法：get
-
-参数：
-
-community_id：社区id；
-keyword：关键字；
-page：页码（默认为1）；
-limit：每页条数（默认为10）
-请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2341,18 +2334,17 @@ limit：每页条数（默认为10）
     }
   ]
 }
+```
+<a name="获取帖子详情"></a>
+#### 2.6.4 获取帖子详情，及评论列表
+##### 接口地址：/studentManage/api/post/getOne
+##### 方法：get
+##### 参数：
+- post_id：帖子id
 
-2.6.4 获取帖子详情，及评论列表
+##### 请求实例：http://localhost:4000/studentManage/api/post/getOne?post_id=4732fa80-a63c-11e5-bda2-a16c423e1024
 
-接口地址：/studentManage/api/post/getOne
-
-方法：get
-
-参数：
-
-post_id：帖子id
-请求实例：http://localhost:4000/studentManage/api/post/getOne?post_id=4732fa80-a63c-11e5-bda2-a16c423e1024
-
+```
 {
   "code": "200",
   "msg": "获取信息成功！",
@@ -2391,21 +2383,23 @@ post_id：帖子id
     }
   ]
 }
+```
 
-2.6.5 发帖
 
-接口地址：/studentManage/api/post/add
 
-方法：post
+<a name="发帖"></a>
+#### 2.6.5 发帖
+##### 接口地址：/studentManage/api/post/add
+##### 方法：post
+##### 参数：(form-data)
+- parent_id：所属社区id
+- parent_name：所属社区
+- title：帖子标题
+- content：帖子内容
+- images: 上传图片
+- user_id:用户id
 
-参数：(form-data)
-
-parent_id：所属社区id
-parent_name：所属社区
-title：帖子标题
-content：帖子内容
-images: 上传图片
-user_id:用户id
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -2426,19 +2420,21 @@ user_id:用户id
     "id": 22
   }
 }
+```
 
-2.6.5 点赞帖子
+<a name="点赞新闻"></a>
+#### 2.6.5 点赞帖子
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 帖子id
+- user_id: 用户id
+- type = post
+- operation = d
 
-接口地址：/studentManage/api/obj_operation/add
 
-方法：post
 
-参数：
-
-obj_id: 帖子id
-user_id: 用户id
-type = post
-operation = d
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -2453,19 +2449,21 @@ operation = d
   }
 }
 
+```
 
-2.6.6 关注社区
 
-接口地址：/studentManage/api/obj_operation/add
+<a name="关注社区"></a>
+#### 2.6.6 关注社区
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id = 社区id
+- user_id = 用户id
+- type = coummunity
+- operation = g
 
-方法：post
 
-参数：
-
-obj_id = 社区id
-user_id = 用户id
-type = coummunity
-operation = g
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -2479,15 +2477,17 @@ operation = g
     "id": 40
   }
 }
+```
 
-2.6.7 获取精选帖列表
 
-接口地址：/studentManage/api/post/goodlist
 
-方法：get
+<a name="获取精选帖列表"></a>
+#### 2.6.7 获取精选帖列表
+##### 接口地址：/studentManage/api/post/goodlist
+##### 方法：get
+##### 参数：
 
-参数：
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2590,18 +2590,18 @@ operation = g
   ],
   "count": 5
 }
+```
 
-2.6.8 根据社区id，获取置顶贴列表
+<a name="根据社区id，获取置顶贴列表"></a>
+#### 2.6.8 根据社区id，获取置顶贴列表
+##### 接口地址：/studentManage/api/post/toplist
+##### 方法：get
 
-接口地址：/studentManage/api/post/toplist
+##### 参数：
+- community_id：社区id
 
-方法：get
-
-参数：
-
-community_id：社区id
-返回值：
-
+##### 返回值：
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2647,21 +2647,24 @@ community_id：社区id
   ],
   "count": 2
 }
+```
 
-2.6.10 评论帖子
 
-接口地址：/studentManage/api/comment/add
 
-方法：post
 
-参数：
+<a name="评论帖子"></a>
+#### 2.6.10 评论帖子
+##### 接口地址：/studentManage/api/comment/add
+##### 方法：post
 
-parent_id：帖子id
-parent_type = "post"
-user_id：发帖人
-content：帖子内容
-返回值：
+##### 参数：
+- parent_id：帖子id
+- parent_type = "post"
+- user_id：发帖人
+- content：帖子内容
 
+##### 返回值：
+```
 {
   "code": "200",
   "msg": "创建成功！",
@@ -2677,22 +2680,25 @@ content：帖子内容
     "id": 2
   }
 }
+```
 
-2.7 用户相关
 
 
-2.7.1 获取我收藏的课程
 
-接口地址：/studentManage/api/obj_operation/myCollection
+<a name="用户相关"></a>
+### 2.7 用户相关
 
-方法：get
+<a name="获取我收藏的课程"></a>
+#### 2.7.1 获取我收藏的课程
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+- type= course
 
-参数：
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=course
 
-user_id: 用户id；
-type= course
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=course
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2723,19 +2729,18 @@ type= course
     }
   ]
 }
+```
+<a name="获取我收藏的试卷"></a>
+#### 2.7.2 获取我收藏的试卷
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+- type=exam
 
-2.7.2 获取我收藏的试卷
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=exam
 
-接口地址：/studentManage/api/obj_operation/myCollection
-
-方法：get
-
-参数：
-
-user_id: 用户id；
-type=exam
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=exam
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2772,19 +2777,18 @@ type=exam
     }
   ]
 }
+```
+<a name="获取我收藏的笔记"></a>
+#### 2.7.3 获取我收藏的笔记
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+- type=note
 
-2.7.3 获取我收藏的笔记
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=note
 
-接口地址：/studentManage/api/obj_operation/myCollection
-
-方法：get
-
-参数：
-
-user_id: 用户id；
-type=note
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=note
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2805,19 +2809,18 @@ type=note
     }
   ]
 }
+```
+<a name="获取我收藏的新闻"></a>
+#### 2.7.4 获取我收藏的新闻
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+- type=news
 
-2.7.4 获取我收藏的新闻
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=news
 
-接口地址：/studentManage/api/obj_operation/myCollection
-
-方法：get
-
-参数：
-
-user_id: 用户id；
-type=news
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=news
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2856,19 +2859,19 @@ type=news
     }
   ]
 }
+```
 
-2.7.5 获取我的错题
+<a name="获取我的错题"></a>
+#### 2.7.5 获取我的错题
+##### 接口地址：/studentManage/api/obj_operation/myCollection
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+- type=wrong
 
-接口地址：/studentManage/api/obj_operation/myCollection
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=wrong
 
-方法：get
-
-参数：
-
-user_id: 用户id；
-type=wrong
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myCollection?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=wrong
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2903,19 +2906,20 @@ type=wrong
     }
   ]
 }
+```
 
-2.7.6 获取我关注的社区
 
-接口地址：/studentManage/api/obj_operation/myFocus
+<a name="获取我关注的社区"></a>
+#### 2.7.6 获取我关注的社区
+##### 接口地址：/studentManage/api/obj_operation/myFocus
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+-  type=coummunity
 
-方法：get
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=coummunity
 
-参数：
-
-user_id: 用户id；
-type=coummunity
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=coummunity
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2940,19 +2944,19 @@ type=coummunity
     }
   ]
 }
+```
 
-2.7.7 获取我关注的新闻标签
+<a name="获取我关注的新闻标签"></a>
+#### 2.7.7 获取我关注的新闻标签
+##### 接口地址：/studentManage/api/obj_operation/myFocus
+##### 方法：get
+##### 参数：
+- user_id: 用户id；
+- type=subscription
 
-接口地址：/studentManage/api/obj_operation/myFocus
+##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=subscription
 
-方法：get
-
-参数：
-
-user_id: 用户id；
-type=subscription
-请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=subscription
-
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -2981,54 +2985,121 @@ type=subscription
     }
   ]
 }
+```
 
-2.7.8 用户登录
 
-接口地址：/studentManage/api/user/login
+<a name="用户登录"></a>
+#### 2.7.8 用户登录
+##### 接口地址：/studentManage/api/user/login
+##### 方法：post
+##### 参数：
+- account: 账号（例如：wuwanyu_321@163.com）；
+- psw: 密码（例如： 123）
 
-方法：post
+##### 请求实例：http://localhost:4000/studentManage/api/user/login
 
-参数：
+- 登录成功
+```
+{
+  "code": "200",
+  "msg": "登录成功！",
+  "user": {
+    "user_id": "6a3eb1f0-ad2f-11e5-9ec1-cbdc2e34acc2",
+    "name": "wuwanyu",
+    "psw": "123",
+    "account": "wuwanyu_321@163.com",
+    "school": "西北大学",
+    "major": "软件工程",
+    "points": "10",
+    "datems": null,
+    "type": "student",
+    "icon": "/files/image/Tulips.jpg",
+    "desc": null,
+    "createdAt": "2015-12-28T06:52:57.000Z",
+    "updatedAt": "2015-12-28T06:52:57.000Z",
+    "id": 4
+  }
+}
+```
+- 登录失败：密码输入错误
+```
+{
+  "code": "203",
+  "msg": "密码输入错误！"
+}
+```
+- 登录失败：账号不存在
+```
+{
+  "code": "202",
+  "msg": "账号不存在！"
+}
+```
 
-account: 账号（例如：wuwanyu_321@163.com）；
-psw: 密码（例如： 123）
-请求实例：http://localhost:4000/studentManage/api/user/login
 
-登录成功 { "code": "200", "msg": "登录成功！", "user": { "user_id": "6a3eb1f0-ad2f-11e5-9ec1-cbdc2e34acc2", "name": "wuwanyu", "psw": "123", "account": "wuwanyu_321@163.com", "school": "西北大学", "major": "软件工程", "points": "10", "datems": null, "type": "student", "icon": "/files/image/Tulips.jpg", "desc": null, "createdAt": "2015-12-28T06:52:57.000Z", "updatedAt": "2015-12-28T06:52:57.000Z", "id": 4 } }
-登录失败：密码输入错误 { "code": "203", "msg": "密码输入错误！" }
-登录失败：账号不存在 { "code": "202", "msg": "账号不存在！" }
 
-2.7.9 用户注册
+<a name="用户注册"></a>
+#### 2.7.9 用户注册
+##### 接口地址：/studentManage/api/user/reg
+##### 方法：post
+##### 参数：(form-data)
 
-接口地址：/studentManage/api/user/reg
+- account: 账号，例如：HerryPoter@163.com
+- - name: 用户名，例如：HerryPoter
+- psw:密码，例如： 111111
+- school: 学校，例如：哈佛大学（非必须）
+- major: 专业，例如：魔法专业（非必须）
+- icon: 用户头像，图片文件
 
-方法：post
+##### 请求实例：http://localhost:4000/studentManage/api/user/reg
 
-参数：(form-data)
+- 注册成功
+```
+{
+  "code": "200",
+  "msg": "注册成功！",
+  "item": {
+    "account": "HerryPoter@163.com",
+    "psw": "111111",
+    "name": "HerryPoter",
+    "school": "哈佛大学",
+    "major": "魔法专业",
+    "icon": "http://120.25.124.68:4000/upload/image/Koala.jpg",
+    "user_id": "c7318520-dbd0-11e5-85bf-7b6030e90180",
+    "points": "10",
+    "datems": "1456412200184",
+    "type": "student",
+    "createdAt": "2016-02-25T15:02:24.629Z",
+    "updatedAt": "2016-02-25T15:02:24.629Z",
+    "id": 10
+  }
+}
+```
+- 注册失败：账号已经存在
+```
+{
+  "code": "400",
+  "msg": "该账号已经注册！"
+}
+```
 
-account: 账号，例如：HerryPoter@163.com
-- name: 用户名，例如：HerryPoter
-psw:密码，例如： 111111
-school: 学校，例如：哈佛大学（非必须）
-major: 专业，例如：魔法专业（非必须）
-icon: 用户头像，图片文件
-请求实例：http://localhost:4000/studentManage/api/user/reg
 
-注册成功 { "code": "200", "msg": "注册成功！", "item": { "account": "HerryPoter@163.com", "psw": "111111", "name": "HerryPoter", "school": "哈佛大学", "major": "魔法专业", "icon": "http://120.25.124.68:4000/upload/image/Koala.jpg", "user_id": "c7318520-dbd0-11e5-85bf-7b6030e90180", "points": "10", "datems": "1456412200184", "type": "student", "createdAt": "2016-02-25T15:02:24.629Z", "updatedAt": "2016-02-25T15:02:24.629Z", "id": 10 } }
-注册失败：账号已经存在 { "code": "400", "msg": "该账号已经注册！" }
 
-2.7.10 查看某人主页
 
-接口地址：/studentManage/api/user/getOneHomePage
 
-方法：get
 
-参数：
+<a name="查看某人主页"></a>
+#### 2.7.10 查看某人主页
+##### 接口地址：/studentManage/api/user/getOneHomePage
+##### 方法：get
+##### 参数：
+   user_id : 用户ID
 
-user_id : 用户ID
 
-请求实例：http://localhost:4000/studentManage/api/user/getOneHomePage?user_id=39ccddf0-dfaa-11e5-834e-a3924c9e9477
+##### 请求实例：http://localhost:4000/studentManage/api/user/getOneHomePage?user_id=39ccddf0-dfaa-11e5-834e-a3924c9e9477
 
+
+```
 {
   "code": "200",
   "msg": "获取列表成功！",
@@ -3093,5 +3164,60 @@ user_id : 用户ID
     }
   ]
 }
-=======
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
