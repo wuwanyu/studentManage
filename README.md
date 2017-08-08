@@ -156,6 +156,7 @@ studentManage接口文档
 * [2.7.01 验证短信验证码](#2701)
 * [2.7.1 用户登录](#271)
 * [2.7.2 用户注册](#272)
+* [2.7.2_1 忘记密码](#272_1)
 * [2.7.3 查看某人主页](#273)
 * [2.7.3 修改用户信息](#274)
 * [2.7.4 获取我收藏的课程（略，见通用接口：2.8.10 获取我收藏的xxx）](#288)
@@ -1993,6 +1994,36 @@ http://120.25.124.68:4000/studentManage/api/user/reg
 
 
 
+
+<a name="273"></a>
+#### 2.7.2_1 忘记密码
+##### 接口地址：/studentManage/api/user/forget
+##### 方法：post
+参数：
+account:账号
+psw:新密码
+
+```
+account:15611111111
+psw:1111
+
+{
+    "code": "200",
+    "msg": "修改成功！",
+    "data": {
+        "updateByAccout": {
+            "fieldCount": 0,
+            "affectedRows": 1,
+            "insertId": 0,
+            "serverStatus": 34,
+            "warningCount": 0,
+            "message": "(Rows matched: 1  Changed: 0  Warnings: 0",
+            "protocol41": true,
+            "changedRows": 0
+        }
+    }
+}
+```
 
 <a name="273"></a>
 #### 2.7.3 查看某人主页
