@@ -1,88 +1,91 @@
 studentManage接口文档
 -----------------
+【2018-7-3 】 2.6.3 获取帖子列表	
 【2017-10-24 】 2.5.8 获取首页轮播图新闻				
 
 * [项目介绍](#项目介绍)
 * [第1章  h5界面](#h5界面)
- *  [1.1 课程相关](#课程相关)
-	  * [1.1.1 视频详情及评论列表页](#获取课程专业列表)
-	  * [1.1.2 第三方视频源播放页](#第三方视频源播放页)
-	*  [1.2 笔记相关](#课程相关)
-	  * [1.2.1 笔记详情及评论列表页](#笔记详情及评论列表页)
-	*  [1.3 新闻相关](#课程相关)
-	  * [1.3.1 新闻详情及评论列表页](# 新闻详情及评论列表页)
-  *  [1.4 社区相关](#课程相关)
-	  * [1.4.1 帖子详情及评论列表页](#帖子详情及评论列表页)
+ * [1.1 课程相关](#课程相关)
+     * [1.1.1 视频详情及评论列表页](#获取课程专业列表)
+       * [1.1.2 第三方视频源播放页](#第三方视频源播放页)
+     * [1.2 笔记相关](#课程相关)
+       * [1.2.1 笔记详情及评论列表页](#笔记详情及评论列表页)
+     * [1.3 新闻相关](#课程相关)
+       * [1.3.1 新闻详情及评论列表页](# 新闻详情及评论列表页)
+  * [1.4 社区相关](#课程相关)
+      * [1.4.1 帖子详情及评论列表页](#帖子详情及评论列表页)
 * [第1章 接口设计](#接口设计)
+  *  [10 通用接口](#通用接口)
+    * [1.0.1 点赞、收藏、关注](#点赞、收藏、关注)
   *  [11 课程相关](#课程相关)
-	  * [1.1.1 获取课程专业列表](#获取课程专业列表)
-	  * [1.1.2 获取课程列表](#获取课程列表)
-	  * [1.1.3 获取课程列表，分页，评论量，点赞量，模糊查询](#获取课程列表1)
-	  * [1.1.4 获取课程详情，及章节列表](#获取课程详情)
-	  * [1.1.4 获取视频详情，课程评价](#获取视频详情)
-	  * [1.1.5 收藏课程](#收藏课程)
-	  * [1.1.6 点赞课程](#点赞课程)
-	  * [1.1.7 评价课程](#评价课程)
- *  [1.2 题库相关](#题库相关)
-	  * [1.2.1 获取试卷专业列表](#获取试卷专业列表)
-	  * [1.2.2 获取试卷科目列表](#获取试卷科目列表)
-	  * [1.2.3 获取试卷列表](#获取试卷列表)
-	  * [1.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询](#获取试卷列表1)
-	  * [1.2.5 获取试卷详情，及试题列表](#获取试卷详情)
-	  * [1.2.6 收藏试卷](#收藏试卷)
-	  * [1.2.7 点赞试卷](#点赞试卷)
-	  * [1.2.8 评价试卷](#评价试卷)
-	  * [1.2.8 收藏试题](#收藏试题)
-	  * [2.2.9 获取我收藏试题的试卷列表](#获取我收藏试题的试卷列表)
-	  * [2.2.10 根据试卷id，获取我收藏试题的列表](#根据试卷id，获取我收藏试题的列表)
- *  [2.3 笔记相关](#笔记相关)
-	  *  [2.3.1 获取笔记专业列表](#获取笔记专业列表)
-	  * [2.3.2 获取笔记科目列表](#获取笔记科目列表)
-	  * [2.3.3 获取笔记列表](#获取笔记列表)
-	  * [2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询](#获取笔记列表1)
-	  * [2.3.5 获取笔记详情，及评价列表](#获取笔记详情)
-	  * [2.3.6 收藏笔记](#收藏笔记)
-	  * [2.3.7 点赞笔记](#点赞笔记)
-	  * [2.3.8 评价笔记](#评价笔记)
-  *  [2.4 资源相关](#资源相关)
-	  *  [2.4.1 获取资源专业列表](#获取资源专业列表)
-	  * [2.4.2 获取资源科目列表](#获取资源科目列表)
-	  * [2.4.3 获取资源列表](#获取资源列表)
-	  * [2.4.4 获取资源列表，含收藏量，评论量，分页](#获取资源列表1)
-	  * [2.4.5 获取资源详情](#获取资源详情)
-	  * [2.4.6 收藏资源](#收藏资源)
-	  * [2.4.7 点赞资源](#点赞资源)
-	  * [2.4.8 评论资源](#评论资源)
-  *  [2.5 新闻相关](#新闻相关)
-	  * [2.5.1 获取新闻标签列表](#获取新闻标签列表)
-	  * [2.5.2 获取新闻列表](#获取新闻列表)
-	  * [2.5.3 获取新闻详情，及评价列表](#获取新闻详情)
-	  * [2.5.4 添加订阅](#添加订阅)
-	  * [2.5.5 收藏新闻](#收藏新闻)
-	  * [2.5.6 点赞新闻](#点赞新闻)
-	  * [2.5.7 评价新闻](#评价新闻)
+    * [1.1.1 获取课程专业列表](#获取课程专业列表)
+    * [1.1.2 获取课程列表](#获取课程列表)
+    * [1.1.3 获取课程列表，分页，评论量，点赞量，模糊查询](#获取课程列表1)
+    * [1.1.4 获取课程详情，及章节列表](#获取课程详情)
+    * [1.1.4 获取视频详情，课程评价](#获取视频详情)
+    * [1.1.5 收藏课程](#收藏课程)
+    * [1.1.6 点赞课程](#点赞课程)
+    * [1.1.7 评价课程](#评价课程)
+ * [1.2 题库相关](#题库相关)
+     * [1.2.1 获取试卷专业列表](#获取试卷专业列表)
+       * [1.2.2 获取试卷科目列表](#获取试卷科目列表)
+       * [1.2.3 获取试卷列表](#获取试卷列表)
+       * [1.2.4 获取试卷列表，含点赞数量、收藏数量，分页，模糊查询](#获取试卷列表1)
+       * [1.2.5 获取试卷详情，及试题列表](#获取试卷详情)
+       * [1.2.6 收藏试卷](#收藏试卷)
+       * [1.2.7 点赞试卷](#点赞试卷)
+       * [1.2.8 评价试卷](#评价试卷)
+       * [1.2.8 收藏试题](#收藏试题)
+       * [2.2.9 获取我收藏试题的试卷列表](#获取我收藏试题的试卷列表)
+       * [2.2.10 根据试卷id，获取我收藏试题的列表](#根据试卷id，获取我收藏试题的列表)
+ * [2.3 笔记相关](#笔记相关)
+     *  [2.3.1 获取笔记专业列表](#获取笔记专业列表)
+       * [2.3.2 获取笔记科目列表](#获取笔记科目列表)
+       * [2.3.3 获取笔记列表](#获取笔记列表)
+       * [2.3.4 获取笔记列表，含点赞量，收藏量，分页，模糊查询](#获取笔记列表1)
+       * [2.3.5 获取笔记详情，及评价列表](#获取笔记详情)
+       * [2.3.6 收藏笔记](#收藏笔记)
+       * [2.3.7 点赞笔记](#点赞笔记)
+       * [2.3.8 评价笔记](#评价笔记)
+  * [2.4 资源相关](#资源相关)
+      *  [2.4.1 获取资源专业列表](#获取资源专业列表)
+        * [2.4.2 获取资源科目列表](#获取资源科目列表)
+        * [2.4.3 获取资源列表](#获取资源列表)
+        * [2.4.4 获取资源列表，含收藏量，评论量，分页](#获取资源列表1)
+        * [2.4.5 获取资源详情](#获取资源详情)
+        * [2.4.6 收藏资源](#收藏资源)
+        * [2.4.7 点赞资源](#点赞资源)
+        * [2.4.8 评论资源](#评论资源)
+  * [2.5 新闻相关](#新闻相关)
+      * [2.5.1 获取新闻标签列表](#获取新闻标签列表)
+        * [2.5.2 获取新闻列表](#获取新闻列表)
+        * [2.5.3 获取新闻详情，及评价列表](#获取新闻详情)
+        * [2.5.4 添加订阅](#添加订阅)
+        * [2.5.5 收藏新闻](#收藏新闻)
+        * [2.5.6 点赞新闻](#点赞新闻)
+        * [2.5.7 评价新闻](#评价新闻)
       * [2.5.8 获取首页轮播图新闻](#获取首页轮播图新闻)
-  *  [2.6 社区相关](#社区相关)
-	  * [2.6.1 获取社区列表](#获取社区列表)
-	  *  [2.6.2 获取社区详情，及帖子列表](#获取社区详情)
-	  * [2.6.3 获取帖子列表](#获取帖子列表)
-	  * [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
-	  * [2.6.5 发帖](#发帖)
-	  * [2.6.6 关注社区](#关注社区)
-	  * [2.6.7 获取精选帖列表](#获取精选帖列表)
-	  * [2.6.8 根据社区id，获取置顶贴列表](# 根据社区id，获取置顶贴列表)
-	  * [2.6.9 点赞帖子](#点赞帖子)
-	  * [2.6.10 评论帖子](#评论帖子)
- *  [2.7 用户相关](#用户相关)
-	  * [2.7.1 获取我收藏的课程](#获取我收藏的课程)
-	  * [2.7.2 获取我收藏的试卷](#获取我收藏的试卷)
-	  * [2.7.3 获取我收藏的笔记](#获取我收藏的笔记)
-	  * [2.7.4 获取我收藏的新闻](#获取我收藏的新闻)
-	  * [2.7.5 获取我的错题](#获取我的错题)
-	  * [2.7.6 获取我关注的社区](#获取我关注的社区)
-	  * [2.7.7 获取我关注的新闻标签](#获取我关注的新闻标签)
-	  * [2.7.8 用户登录](#用户登录)
-	  * [2.7.9 用户注册](#用户注册)
+  * [2.6 社区相关](#社区相关)
+      * [2.6.1 获取社区列表](#获取社区列表)
+        *  [2.6.2 获取社区详情，及帖子列表](#获取社区详情)
+        *  [2.6.3 获取帖子列表](#获取帖子列表)
+        *  [2.6.4 获取帖子详情，及评论列表](#获取帖子详情)
+        *  [2.6.5 发帖](#发帖)
+        *  [2.6.6 关注社区](#关注社区)
+        *  [2.6.7 获取精选帖列表](#获取精选帖列表)
+        *  [2.6.8 根据社区id，获取置顶贴列表](# 根据社区id，获取置顶贴列表)
+        *  [2.6.9 点赞帖子](#点赞帖子)
+        *  [2.6.10 评论帖子](#评论帖子)
+ * [2.7 用户相关](#用户相关)
+     * [2.7.1 获取我收藏的课程](#获取我收藏的课程)
+       * [2.7.2 获取我收藏的试卷](#获取我收藏的试卷)
+       * [2.7.3 获取我收藏的笔记](#获取我收藏的笔记)
+       * [2.7.4 获取我收藏的新闻](#获取我收藏的新闻)
+       * [2.7.5 获取我的错题](#获取我的错题)
+       * [2.7.6 获取我关注的社区](#获取我关注的社区)
+       * [2.7.7 获取我关注的新闻标签](#获取我关注的新闻标签)
+       * [2.7.8 用户登录](#用户登录)
+       * [2.7.9 用户注册](#用户注册)
       * [2.7.10 查看某人主页](#查看某人主页)
 
 
@@ -143,6 +146,55 @@ studentManage接口文档
 
 <a name="接口设计"></a>
 ## 接口设计
+
+
+
+
+<a name="通用接口"></a>
+### 通用接口
+  <a name="点赞、收藏、关注"></a>
+#### 1.0.1 点赞、收藏、关注
+##### 接口地址：/studentManage/api/obj_operation/add
+##### 方法：post
+##### 参数：
+- obj_id: 课程id
+
+- user_id: 用户id
+
+- type = course
+
+- operation = d(点赞)、s(收藏)、g(关注)
+
+- operation = d(点赞)时， type：
+  course：课程
+  exam：试卷
+  news：新闻
+  post：帖子
+  resource：资源
+  comment：评论
+
+- operation = s(收藏)时，type：
+  course：课程
+  exam：试卷
+  news：新闻
+  examitem：试题
+  resource：资源
+
+- operation = g(关注)时，type：
+  user：用户
+  subscription：试题
+  community：社区
+
+  ​
+
+
+详见具体章节案例
+
+
+
+
+
+
 <a name="课程相关"></a>
 ### 2.1 课程相关
   <a name="获取课程专业列表"></a>
@@ -425,9 +477,36 @@ studentManage接口文档
 ##### 方法：post
 ##### 参数：
 - obj_id: 课程id
+
 - user_id: 用户id
+
 - type = course
-- operation = s
+
+- operation = d(点赞)、s(收藏)、g(关注)
+- operation = d(点赞)时， type：
+  course：课程
+  exam：试卷
+  news：新闻
+  post：帖子
+  resource：资源
+  comment：评论
+
+ - operation = s(收藏)时，type：
+     course：课程
+       exam：试卷
+       news：新闻
+       examitem：试题
+       resource：资源
+
+
+- operation = g(关注)时，type：
+  user：用户
+
+  subscription：试题
+
+  community：社区
+
+
 
 ```
 {
@@ -2179,196 +2258,47 @@ studentManage接口文档
 - keyword：关键字；
 - page：页码（默认为1）；
 - limit：每页条数（默认为10）
+- user_id：用户id（可以查询点赞，关注信息）
+- obj_id：用户ID（只查询该用户发表的帖子）
+- ifHot=1：查询热门帖
+- ifTop=1：查询置顶帖
+- ifChosen=1：查询精选帖
 
 ##### 请求实例：http://localhost:4000/studentManage/api/post/list?community_id=d8d4d140-b2ec-11e5-a306-33448f6b146a
 
 ```
 {
-  "code": "200",
-  "msg": "获取列表成功！",
-  "count": 9,
-  "list": [
-    {
-      "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-      "user_name": "wuwanyu",
-      "user_account": "18233561907",
-      "user_icon": null,
-      "id": 34,
-      "post_id": "e1e1a9e0-78e7-11e6-8382-710908096f7b",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "如何评价鹏远宿舍乱收费现象",
-      "content": "作为东北大学毕业生，不得不说，鹏远宿舍的做法非常过分",
-      "images": "",
-      "level": 0,
-      "datems": "1458045290883",
-      "createdAt": "2016-09-12T12:53:20.000Z",
-      "updatedAt": "2016-09-12T12:53:20.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "HerryPoter",
-      "user_account": "HerryPoter@163.com",
-      "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
-      "id": 4,
-      "post_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "我的苦逼考研日记",
-      "content": "我的苦逼考研日记内容",
-      "images": null,
-      "level": 1,
-      "datems": "1450521352744",
-      "createdAt": "2015-12-19T10:36:45.000Z",
-      "updatedAt": "2016-03-13T10:50:12.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-      "user_name": "wuwanyu",
-      "user_account": "18233561907",
-      "user_icon": null,
-      "id": 35,
-      "post_id": "fc9ffa20-78e7-11e6-81d4-67075da56a85",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "如何评价鹏远宿舍乱收费现象",
-      "content": "作为东北大学毕业生，不得不说，鹏远宿舍的做法非常过分",
-      "images": "",
-      "level": 0,
-      "datems": "1458045290883",
-      "createdAt": "2016-09-12T12:54:05.000Z",
-      "updatedAt": "2016-09-12T12:54:05.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "HerryPoter",
-      "user_account": "HerryPoter@163.com",
-      "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
-      "id": 5,
-      "post_id": "223efcd0-bd1e-11e5-8867-73161ac92107",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "关于基础医学的一些疑问",
-      "content": "今天学了基础医学的一些课程，发现自己好多不懂得...",
-      "images": null,
-      "level": 2,
-      "datems": "1453037282590",
-      "createdAt": "2016-01-17T13:34:49.000Z",
-      "updatedAt": "2016-01-17T13:37:17.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-      "user_name": "wuwanyu",
-      "user_account": "18233561907",
-      "user_icon": null,
-      "id": 36,
-      "post_id": "517ed070-78e8-11e6-a493-3904f149739f",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "如何评价鹏远宿舍乱收费现象",
-      "content": "作为东北大学毕业生，不得不说，鹏远宿舍的做法非常过分",
-      "images": "",
-      "level": 0,
-      "datems": "1458045290883",
-      "createdAt": "2016-09-12T12:56:27.000Z",
-      "updatedAt": "2016-09-12T12:56:27.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "HerryPoter",
-      "user_account": "HerryPoter@163.com",
-      "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
-      "id": 11,
-      "post_id": "ea1619a0-e541-11e5-85a9-b5063fca5f8b",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "测试来了",
-      "content": "我是过来测试哒",
-      "images": null,
-      "level": 1,
-      "datems": "1457450512284",
-      "createdAt": "2016-03-08T15:24:56.000Z",
-      "updatedAt": "2016-03-13T10:50:15.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "HerryPoter",
-      "user_account": "HerryPoter@163.com",
-      "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
-      "id": 10,
-      "post_id": "e4007ba0-e541-11e5-85a9-b5063fca5f8b",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "测试来了",
-      "content": "我是过来测试哒",
-      "images": null,
-      "level": 2,
-      "datems": "1457450512284",
-      "createdAt": "2016-03-08T15:24:46.000Z",
-      "updatedAt": "2016-03-08T15:24:46.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "HerryPoter",
-      "user_account": "HerryPoter@163.com",
-      "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
-      "id": 13,
-      "post_id": "bfd90020-e542-11e5-ae05-cb9952b81b77",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "测试来了",
-      "content": "我是过来测试哒",
-      "images": null,
-      "level": 0,
-      "datems": "1457450835695",
-      "createdAt": "2016-03-08T15:30:55.000Z",
-      "updatedAt": "2016-03-08T15:30:55.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "HerryPoter",
-      "user_account": "HerryPoter@163.com",
-      "user_icon": "http://picm.bbzhi.com/yingshibizhi/halibote/halibote_391073_m.jpg",
-      "id": 22,
-      "post_id": "00c5fa30-eaab-11e5-85f8-05ebc4dc7db8",
-      "parent_id": "95e8d500-bcfd-11e5-8cfe-770f2937a8b8",
-      "parent_name": "晒身边",
-      "title": "小烦恼没什么大不了",
-      "content": "小烦恼没什么大不了小烦恼没什么大不了",
-      "images": "public/file/3bd870116ff9708f5141aa8a374aeabf.jpg",
-      "level": 0,
-      "datems": "1458045290883",
-      "createdAt": "2016-03-15T12:39:47.000Z",
-      "updatedAt": "2016-03-15T12:39:47.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    }
-  ]
+    "code": "200",
+    "msg": "获取列表成功！",
+    "count": 0,
+    "list": [
+        {
+            "user_id": "7fc65600-cc3f-11e7-b9c7-b3fa1966fc36",
+            "user_name": "张淮铭",
+            "user_account": "17865729183",
+            "user_icon": null,
+            "id": 328,
+            "post_id": "f6950980-4db2-11e8-83c0-0fa7629a4823",
+            "parent_id": "71e6ea90-dbae-11e6-8e30-072b40dc304a",
+            "parent_name": "医学生",
+            "title": "听诊",
+            "content": "有听诊软件吗？",
+            "images": null,
+            "ifHot": 1,
+            "ifTop": 1,
+            "ifChosen": 0,
+            "datems": "1525229167128",
+            "view_count": 7,
+            "createdAt": "2018-05-02T02:46:07.000Z",
+            "updatedAt": "2018-05-02T02:46:07.000Z",
+            "if_d": null,
+            "if_g": null,
+            "f_count": null,
+            "d_count": null,
+            "p_count": null,
+            "shared_page_url": "http://medic.datuosi.com:4000/studentManage/mobile/post?post_id=f6950980-4db2-11e8-83c0-0fa7629a4823"
+        }
+    ]
 }
 ```
 <a name="获取帖子详情"></a>
@@ -2516,174 +2446,6 @@ studentManage接口文档
 ```
 
 
-
-<a name="获取精选帖列表"></a>
-#### 2.6.7 获取精选帖列表
-##### 接口地址：/studentManage/api/post/goodlist
-##### 方法：get
-##### 参数：
-
-```
-{
-  "code": "200",
-  "msg": "获取列表成功！",
-  "list": [
-    {
-      "id": 1,
-      "post_id": "post01",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "新人报道，望多多指教",
-      "content": "0",
-      "images": null,
-      "level": 2,
-      "user_id": "user01",
-      "user_name": "wuwanyu",
-      "user_icon": null,
-      "datems": "3454422",
-      "createdAt": null,
-      "updatedAt": "2016-03-13T11:16:20.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "id": 2,
-      "post_id": "post02",
-      "parent_id": "95e8d500-bcfd-11e5-8cfe-770f2937a8b8",
-      "parent_name": "晒身边",
-      "title": "小烦恼没什么大不了",
-      "content": "0",
-      "images": null,
-      "level": 2,
-      "user_id": "user02",
-      "user_name": "chenguang",
-      "user_icon": null,
-      "datems": "3454422",
-      "createdAt": null,
-      "updatedAt": "2016-03-13T11:16:23.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "id": 5,
-      "post_id": "223efcd0-bd1e-11e5-8867-73161ac92107",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "关于基础医学的一些疑问",
-      "content": "今天学了基础医学的一些课程，发现自己好多不懂得...",
-      "images": null,
-      "level": 2,
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "wuwanyu",
-      "user_icon": null,
-      "datems": "1453037282590",
-      "createdAt": "2016-01-17T13:34:49.000Z",
-      "updatedAt": "2016-01-17T13:37:17.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "id": 10,
-      "post_id": "e4007ba0-e541-11e5-85a9-b5063fca5f8b",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "测试来了",
-      "content": "我是过来测试哒",
-      "images": null,
-      "level": 2,
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "wuwanyu",
-      "user_icon": null,
-      "datems": "1457450512284",
-      "createdAt": "2016-03-08T15:24:46.000Z",
-      "updatedAt": "2016-03-08T15:24:46.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "id": 12,
-      "post_id": "ba001d00-e542-11e5-ae05-cb9952b81b77",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "测试来了",
-      "content": "我是过来测试哒",
-      "images": null,
-      "level": 2,
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "wuwanyu",
-      "user_icon": null,
-      "datems": "1457450835695",
-      "createdAt": "2016-03-08T15:30:45.000Z",
-      "updatedAt": "2016-03-08T15:30:45.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    }
-  ],
-  "count": 5
-}
-```
-
-<a name="根据社区id，获取置顶贴列表"></a>
-#### 2.6.8 根据社区id，获取置顶贴列表
-##### 接口地址：/studentManage/api/post/toplist
-##### 方法：get
-
-##### 参数：
-- community_id：社区id
-
-##### 返回值：
-```
-{
-  "code": "200",
-  "msg": "获取列表成功！",
-  "list": [
-    {
-      "id": 4,
-      "post_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "我的苦逼考研日记",
-      "content": "我的苦逼考研日记内容",
-      "images": null,
-      "level": 1,
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "杨梅",
-      "user_icon": null,
-      "datems": "1450521352744",
-      "createdAt": "2015-12-19T10:36:45.000Z",
-      "updatedAt": "2016-03-13T10:50:12.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    },
-    {
-      "id": 11,
-      "post_id": "ea1619a0-e541-11e5-85a9-b5063fca5f8b",
-      "parent_id": "d8d4d140-b2ec-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "测试来了",
-      "content": "我是过来测试哒",
-      "images": null,
-      "level": 1,
-      "user_id": "2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5",
-      "user_name": "wuwanyu",
-      "user_icon": null,
-      "datems": "1457450512284",
-      "createdAt": "2016-03-08T15:24:56.000Z",
-      "updatedAt": "2016-03-13T10:50:15.000Z",
-      "s_count": null,
-      "d_count": null,
-      "p_count": null
-    }
-  ],
-  "count": 2
-}
-```
 
 
 
@@ -2951,7 +2713,7 @@ studentManage接口文档
 ##### 方法：get
 ##### 参数：
 - user_id: 用户id；
--  type=coummunity
+- type=coummunity
 
 ##### 请求实例：http://localhost:4000/studentManage/api/obj_operation/myFocus?user_id=2fc48bd0-a62c-11e5-9a32-a31e4e4cd6a5&type=coummunity
 
@@ -3129,83 +2891,71 @@ studentManage接口文档
 ##### 接口地址：/studentManage/api/user/getOneHomePage
 ##### 方法：get
 ##### 参数：
-   user_id : 用户ID
+obj_id：对方ID
+
+user_id : 本人ID（传该字段返回：if_d(用户是否点赞帖子)、if_g(用户是否关注作者)）
 
 
-##### 请求实例：http://localhost:4000/studentManage/api/user/getOneHomePage?user_id=39ccddf0-dfaa-11e5-834e-a3924c9e9477
+##### 请求实例：http://localhost:4000/studentManage/api/user/getOneHomePage?obj_id=5d4abf10-eec0-11e6-9f8c-2b319d49de1b&user_id=af0aae90-e3a5-11e5-9620-594c23421db2
 
 
 ```
 {
-  "code": "200",
-  "msg": "获取列表成功！",
-  "info": {
-    "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-    "name": "wuwanyu",
-    "psw": "123",
-    "account": "18233561907",
-    "school": "东北大学",
-    "major": "通信工程",
-    "points": 12,
-    "datems": "1450514441486",
-    "type": "student",
-    "icon": null,
-    "desc": null,
-    "createdAt": "2015-12-19T08:42:31.000Z",
-    "updatedAt": "2016-09-12T12:40:55.000Z",
-    "id": 3
-  },
-  "postList": [
-    {
-      "id": 34,
-      "post_id": "e1e1a9e0-78e7-11e6-8382-710908096f7b",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "如何评价鹏远宿舍乱收费现象",
-      "content": "作为东北大学毕业生，不得不说，鹏远宿舍的做法非常过分",
-      "images": "",
-      "level": 0,
-      "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-      "datems": "1458045290883",
-      "createdAt": "2016-09-12T12:53:20.000Z",
-      "updatedAt": "2016-09-12T12:53:20.000Z"
-    },
-    {
-      "id": 35,
-      "post_id": "fc9ffa20-78e7-11e6-81d4-67075da56a85",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "如何评价鹏远宿舍乱收费现象",
-      "content": "作为东北大学毕业生，不得不说，鹏远宿舍的做法非常过分",
-      "images": "",
-      "level": 0,
-      "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-      "datems": "1458045290883",
-      "createdAt": "2016-09-12T12:54:05.000Z",
-      "updatedAt": "2016-09-12T12:54:05.000Z"
-    },
-    {
-      "id": 36,
-      "post_id": "517ed070-78e8-11e6-a493-3904f149739f",
-      "parent_id": "43210960-b2ed-11e5-a306-33448f6b146a",
-      "parent_name": "医学生",
-      "title": "如何评价鹏远宿舍乱收费现象",
-      "content": "作为东北大学毕业生，不得不说，鹏远宿舍的做法非常过分",
-      "images": "",
-      "level": 0,
-      "user_id": "39ccddf0-dfaa-11e5-834e-a3924c9e9477",
-      "datems": "1458045290883",
-      "createdAt": "2016-09-12T12:56:27.000Z",
-      "updatedAt": "2016-09-12T12:56:27.000Z"
-    }
-  ]
+    "code": "200",
+    "msg": "获取列表成功！",
+    "isFocused": "no",
+    "userInfo": [
+        {
+            "user_id": "5d4abf10-eec0-11e6-9f8c-2b319d49de1b",
+            "name": "嘉",
+            "psw": "950319",
+            "psw_crypt": "b1f1dedca87ed2d83d64d0d8d4b15f9e",
+            "account": "18604818327",
+            "school": "包医",
+            "major": "临床",
+            "points": 13,
+            "datems": "1486642064770",
+            "type": "student",
+            "icon": null,
+            "sex": "女",
+            "age": null,
+            "desc": null,
+            "createdAt": "2017-02-09T12:07:44.000Z",
+            "updatedAt": "2017-02-09T12:07:44.000Z",
+            "ID": 168,
+            "view_count": 0,
+            "g_count": 0,  //关注
+            "f_count": 2,//粉丝量
+            "t_count": 1,//发帖量
+            "d_count": 3//点赞量(发帖的点赞量之和)
+        }
+    ],
+    "postList": [
+        {
+            "user_id": "5d4abf10-eec0-11e6-9f8c-2b319d49de1b",
+            "user_name": "嘉",
+            "user_account": "18604818327",
+            "user_icon": null,
+            "id": 165,
+            "post_id": "5a0e6350-eec1-11e6-9f8c-2b319d49de1b",
+            "parent_id": "48687360-bfa6-11e6-86bb-63177cf8d910",
+            "parent_name": "有问必答",
+            "title": "头静脉注射抗生素药物到达肾的途径",
+            "content": "头静脉注射抗生素药物到达肾的途径",
+            "images": null,
+            "ifHot": null,  //是否热门
+            "ifTop": null,//是否置顶
+            "ifChosen": null,//是否精选
+            "datems": "1486642488837",
+            "view_count": 100, //查看量
+            "createdAt": "2017-02-09T12:14:48.000Z",
+            "updatedAt": "2017-02-09T12:14:48.000Z",
+            "f_count": 0,  //分享数
+            "d_count": 3,//点赞数
+            "p_count": 5,//评论数
+            "if_d": null,  //是否点赞该帖子
+            "if_g": null   //是否关注作者
+        }
+    ]
 }
 ```
-
-
-
-
-
-
-
-
