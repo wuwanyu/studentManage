@@ -1,5 +1,6 @@
 studentManage接口文档
 -----------------
+【2018-7-16 】2.7.11 取消关注、收藏、点赞
 【2018-7-3 】 2.6.3 获取帖子列表	
 【2017-10-24 】 2.5.8 获取首页轮播图新闻				
 
@@ -86,7 +87,9 @@ studentManage接口文档
        * [2.7.7 获取我关注的新闻标签](#获取我关注的新闻标签)
        * [2.7.8 用户登录](#用户登录)
        * [2.7.9 用户注册](#用户注册)
-      * [2.7.10 查看某人主页](#查看某人主页)
+       * [2.7.10 查看某人主页](#查看某人主页)
+       * [2.7.11 取消关注、收藏、点赞](#取消关注、收藏、点赞)
+
 
 
 <a name="项目介绍"></a>
@@ -2959,3 +2962,40 @@ user_id : 本人ID（传该字段返回：if_d(用户是否点赞帖子)、if_g(
     ]
 }
 ```
+
+
+
+
+<a name="取消关注、收藏、点赞"></a>
+
+#### 2.7.11 取消关注、收藏、点赞
+
+##### 接口地址：/studentManage/api/obj_operation/delete
+
+##### 方法：get
+
+##### 参数：
+- user_id: 用户id；
+- obj_id：对象id
+- operation:d（点赞）/s（收藏）/g（关注）
+- type
+operation=d时，type：course（课程）,exam（试卷）,news（新闻）,note（笔记）,resource（资源）,post（帖子/笔记）,comment（评论）
+operation=s时，type：course（课程）,exam（试卷）,examitem（试题）,news（新闻）,note（笔记）,resource（资源）,wrong（错题）
+operation=g时，type：community（社区）,user（用户）,subscription（订阅）
+
+```
+  {
+  code:"200",
+  msg:"取消关注/收藏成功！！",
+  item:xxx
+  }
+ {
+ code:"304",
+ msg:"对象不存在！"
+ }    
+ 
+ {
+ code:"303",
+ msg:"缺少必要参数"
+ }
+  ```
