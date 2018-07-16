@@ -2981,9 +2981,13 @@ user_id : 本人ID（传该字段返回：if_d(用户是否点赞帖子)、if_g(
 - obj_id：对象id
 - operation:d（点赞）/s（收藏）/g（关注）
 - type
+
 operation=d时，type：course（课程）,exam（试卷）,news（新闻）,note（笔记）,resource（资源）,post（帖子/笔记）,comment（评论）
+
 operation=s时，type：course（课程）,exam（试卷）,examitem（试题）,news（新闻）,note（笔记）,resource（资源）,wrong（错题）
+
 operation=g时，type：community（社区）,user（用户）,subscription（订阅）
+
 
 ```
   {
